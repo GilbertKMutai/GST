@@ -1,0 +1,171 @@
+/* ============================================================
+   About.razor.css  —  CSS Isolation for the About page.
+   ============================================================ */
+
+.about-section {
+    background: var(--bg);
+    padding: 120px 48px;
+    transition: background 0.5s;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 100px;
+    align-items: start;
+}
+
+.about-heading {
+    font-family: var(--serif);
+    font-size: clamp(36px, 4.2vw, 66px);
+    line-height: 1.1;
+    color: var(--heading);
+    font-style: italic;
+    transition: color 0.5s;
+}
+
+.about-heading em { color: var(--accent); font-style: normal; }
+
+.about-text {
+    font-size: 1rem;
+    line-height: 1.85;
+    color: var(--text-dim);
+    margin-bottom: 28px;
+    transition: color 0.5s;
+}
+
+/* ── Pillars ──────────────────────────────────────────────── */
+.about-pillars { margin-top: 52px; }
+
+.pillar {
+    border-top: 1px solid var(--border);
+    padding: 26px 0;
+    display: flex;
+    gap: 28px;
+    transition: border-top-color 0.25s;
+}
+
+.pillar:last-child { border-bottom: 1px solid var(--border); }
+.pillar:hover { border-top-color: var(--accent); }
+
+.pillar-num {
+    font-family: var(--mono);
+    font-size: 0.63rem;
+    color: var(--text-dimmer);
+    letter-spacing: 0.1em;
+    padding-top: 4px;
+    min-width: 34px;
+    transition: color 0.5s;
+}
+
+.pillar-body h4 {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--heading);
+    margin-bottom: 8px;
+    transition: color 0.5s;
+}
+
+.pillar-body p {
+    font-size: 0.87rem;
+    line-height: 1.65;
+    color: var(--text-dim);
+    transition: color 0.5s;
+}
+
+/* ── Golden Circle ────────────────────────────────────────── */
+.golden-circle {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--border);
+    margin-top: 80px;
+    transition: background 0.5s;
+}
+
+.gc-item {
+    background: var(--surface);
+    padding: 48px 40px;
+    transition: background 0.5s;
+}
+
+.gc-item:hover { background: var(--surface-2); }
+
+.gc-label {
+    font-family: var(--mono);
+    font-size: 0.62rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 16px;
+}
+
+.gc-text {
+    font-size: 0.95rem;
+    color: var(--text-dim);
+    line-height: 1.7;
+    transition: color 0.5s;
+}
+
+/* ── Founder Block ────────────────────────────────────────── */
+.founder-block {
+    margin-top: 100px;
+    padding-top: 80px;
+    border-top: 1px solid var(--border);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+    transition: border-color 0.5s;
+}
+
+.founder-title {
+    font-family: var(--display);
+    font-size: clamp(48px, 6vw, 90px);
+    line-height: 0.9;
+    letter-spacing: 0.02em;
+    color: var(--heading);
+    margin-bottom: 32px;
+    transition: color 0.5s;
+}
+
+.founder-detail {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.fd-item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    border-left: 1px solid var(--border);
+    padding-left: 18px;
+    transition: border-left-color 0.25s;
+}
+
+.fd-item:hover { border-left-color: var(--accent); }
+
+.fd-label {
+    font-family: var(--mono);
+    font-size: 0.6rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--text-dimmer);
+    transition: color 0.5s;
+}
+
+.fd-value {
+    font-size: 0.92rem;
+    color: var(--text);
+    transition: color 0.5s;
+}
+
+.cta-wrap { margin-top: 32px; }
+
+/* ── Responsive ───────────────────────────────────────────── */
+@media (max-width: 960px) {
+    .about-section { padding: 80px 24px; }
+    .about-grid, .golden-circle, .founder-block { grid-template-columns: 1fr; gap: 48px; }
+    .founder-block { margin-top: 60px; padding-top: 60px; }
+}

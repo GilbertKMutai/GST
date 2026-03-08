@@ -1,0 +1,248 @@
+/* ============================================================
+   Process.razor.css  —  CSS Isolation for the Process page.
+   ============================================================ */
+
+/* ── Hero / Steps Section ─────────────────────────────────── */
+.process-hero[b-x156tnsdho] {
+    padding: 120px 48px;
+    background: var(--surface);
+    position: relative;
+    overflow: hidden;
+    transition: background 0.5s;
+}
+
+.process-bg-text[b-x156tnsdho] {
+    position: absolute;
+    top: 50%;
+    left: -20px;
+    transform: translateY(-50%);
+    font-family: var(--display);
+    font-size: 35vw;
+    color: var(--border);
+    pointer-events: none;
+    white-space: nowrap;
+    letter-spacing: 0.02em;
+    line-height: 1;
+    user-select: none;
+    transition: color 0.5s;
+}
+
+.process-grid[b-x156tnsdho] {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 100px;
+    align-items: start;
+    position: relative; /* sits above bg text */
+}
+
+.process-title[b-x156tnsdho] {
+    font-family: var(--display);
+    font-size: clamp(52px, 7vw, 110px);
+    line-height: 0.9;
+    letter-spacing: 0.02em;
+    color: var(--heading);
+    margin-bottom: 32px;
+    transition: color 0.5s;
+}
+
+.process-intro[b-x156tnsdho] {
+    font-size: 1rem;
+    color: var(--text-dim);
+    line-height: 1.75;
+    max-width: 380px;
+    transition: color 0.5s;
+}
+
+/* ── Step List ────────────────────────────────────────────── */
+.steps[b-x156tnsdho] { display: flex; flex-direction: column; }
+
+.step[b-x156tnsdho] {
+    border-top: 1px solid var(--border);
+    padding: 36px 0;
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 20px;
+    transition: border-top-color 0.25s;
+}
+
+.step:last-child[b-x156tnsdho] { border-bottom: 1px solid var(--border); }
+.step:hover[b-x156tnsdho]      { border-top-color: var(--accent); }
+
+.step-num[b-x156tnsdho] {
+    font-family: var(--display);
+    font-size: 2.8rem;
+    color: var(--text-dimmer);
+    letter-spacing: 0.02em;
+    line-height: 1;
+    padding-top: 4px;
+    transition: color 0.25s;
+}
+
+.step:hover .step-num[b-x156tnsdho] { color: var(--accent); }
+
+.step-body h4[b-x156tnsdho] {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--heading);
+    margin-bottom: 10px;
+    transition: color 0.5s;
+}
+
+.step-body p[b-x156tnsdho] {
+    font-size: 0.87rem;
+    color: var(--text-dim);
+    line-height: 1.7;
+    transition: color 0.5s;
+}
+
+/* ── Sprint Template ──────────────────────────────────────── */
+.sprint-section[b-x156tnsdho] {
+    background: var(--bg);
+    padding: 120px 48px;
+    transition: background 0.5s;
+}
+
+.phase-grid[b-x156tnsdho] {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: var(--border);
+    transition: background 0.5s;
+}
+
+.phase[b-x156tnsdho] {
+    background: var(--bg);
+    padding: 48px 36px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    transition: background 0.3s;
+}
+
+.phase:hover[b-x156tnsdho] { background: var(--surface); }
+
+.phase-week[b-x156tnsdho] {
+    font-family: var(--mono);
+    font-size: 0.62rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--accent);
+}
+
+.phase-title[b-x156tnsdho] {
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: var(--heading);
+    transition: color 0.5s;
+}
+
+.phase-items[b-x156tnsdho] {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.phase-item[b-x156tnsdho] {
+    font-size: 0.84rem;
+    color: var(--text-dim);
+    padding-left: 16px;
+    position: relative;
+    transition: color 0.5s;
+}
+
+.phase-item[b-x156tnsdho]::before {
+    content: '·';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+}
+
+/* ── Feasibility ──────────────────────────────────────────── */
+.feasibility-section[b-x156tnsdho] {
+    background: var(--surface);
+    padding: 120px 48px;
+    transition: background 0.5s;
+}
+
+.feasibility-grid[b-x156tnsdho] {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--border);
+    transition: background 0.5s;
+}
+
+.feas-item[b-x156tnsdho] {
+    background: var(--surface);
+    padding: 48px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    transition: background 0.5s;
+}
+
+.feas-label[b-x156tnsdho] {
+    font-family: var(--mono);
+    font-size: 0.62rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent);
+}
+
+.feas-rating[b-x156tnsdho] {
+    font-family: var(--display);
+    font-size: 3rem;
+    color: var(--accent);
+    line-height: 1;
+    transition: color 0.5s;
+}
+
+.feas-text[b-x156tnsdho] {
+    font-size: 0.87rem;
+    color: var(--text-dim);
+    line-height: 1.7;
+    transition: color 0.5s;
+}
+
+/* ── CTA ──────────────────────────────────────────────────── */
+.process-cta[b-x156tnsdho] {
+    background: var(--bg);
+    padding: 80px 48px;
+    transition: background 0.5s;
+}
+
+.cta-row[b-x156tnsdho] {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 32px;
+}
+
+.cta-heading[b-x156tnsdho] {
+    font-family: var(--display);
+    font-size: clamp(40px, 5vw, 80px);
+    color: var(--heading);
+    letter-spacing: 0.02em;
+    line-height: 0.9;
+    transition: color 0.5s;
+}
+
+.cta-actions[b-x156tnsdho] { display: flex; gap: 16px; flex-wrap: wrap; }
+
+/* ── Responsive ───────────────────────────────────────────── */
+@media (max-width: 960px) {
+    .process-hero[b-x156tnsdho]    { padding: 80px 24px; }
+    .process-grid[b-x156tnsdho]    { grid-template-columns: 1fr; gap: 56px; }
+    .sprint-section[b-x156tnsdho]  { padding: 80px 24px; }
+    .phase-grid[b-x156tnsdho]      { grid-template-columns: 1fr 1fr; }
+    .feasibility-section[b-x156tnsdho] { padding: 80px 24px; }
+    .feasibility-grid[b-x156tnsdho] { grid-template-columns: 1fr; }
+    .process-cta[b-x156tnsdho]     { padding: 60px 24px; }
+    .cta-row[b-x156tnsdho]         { flex-direction: column; align-items: flex-start; }
+}
+
+@media (max-width: 600px) {
+    .phase-grid[b-x156tnsdho] { grid-template-columns: 1fr; }
+}

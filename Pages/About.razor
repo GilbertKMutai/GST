@@ -1,0 +1,147 @@
+@page "/about"
+@inject IJSRuntime JS
+
+<div class="page-header">
+    <div class="container">
+        <div class="ph-eyebrow">
+            <div class="ph-eyebrow-line"></div>
+            <span>The Agency</span>
+        </div>
+        <h1 class="ph-title">
+            <span class="line"><span>About</span></span>
+            <span class="line"><span class="accent">Gilbert.</span></span>
+        </h1>
+        <p class="ph-sub">
+            A boutique .NET &amp; Cloud engineering consultancy competing on expertise, not geography.
+            Built from Nairobi for the world's most demanding markets.
+        </p>
+    </div>
+</div>
+
+<!-- ── PHILOSOPHY ────────────────────────────────────────── -->
+<section class="about-section">
+    <div class="container">
+        <div class="section-label">
+            <div class="section-label-line"></div>
+            <span>Our Philosophy</span>
+        </div>
+        <div class="about-grid">
+            <div class="reveal">
+                <h2 class="about-heading">
+                    We don't write <em>code</em>.<br />We engineer <em>outcomes</em>.
+                </h2>
+            </div>
+            <div>
+                <p class="about-text reveal">
+                    Gilbert Specialists Tech is a boutique .NET &amp; Cloud engineering consultancy
+                    based in Nairobi, Kenya — competing on expertise, not geography. We target
+                    high-value freelance and Corp-to-Corp contracts from the USA and European markets.
+                </p>
+                <p class="about-text reveal reveal-d1">
+                    As a registered sole proprietorship under Kenyan law, we operate with the
+                    transparency and accountability that C2C contract structures demand. Every
+                    engagement is architected for measurable business impact — not just delivered code.
+                </p>
+                <p class="about-text reveal reveal-d2">
+                    Our primary archetype is The Sage: analytical, precise, and specialized.
+                    Our secondary archetype is The Magician: we take underperforming apps and
+                    transform them into profitable assets. Visionary and results-driven.
+                </p>
+
+                <div class="about-pillars">
+                    <div class="pillar reveal reveal-d1">
+                        <div class="pillar-num">01</div>
+                        <div class="pillar-body">
+                            <h4>Conversion over Code</h4>
+                            <p>We don't just write C#; we build features that reduce check-in times by 60% or increase sales. Code is the means, not the end.</p>
+                        </div>
+                    </div>
+                    <div class="pillar reveal reveal-d2">
+                        <div class="pillar-num">02</div>
+                        <div class="pillar-body">
+                            <h4>Reliability is Revenue</h4>
+                            <p>Downtime costs money. Our Azure-first architecture ensures your system stays online when it matters most.</p>
+                        </div>
+                    </div>
+                    <div class="pillar reveal reveal-d3">
+                        <div class="pillar-num">03</div>
+                        <div class="pillar-body">
+                            <h4>Seamless Migration</h4>
+                            <p>Moving from WPF or React to modern Blazor doesn't have to be a risk. We make it a competitive advantage.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Golden Circle -->
+        <div class="golden-circle reveal">
+            <div class="gc-item">
+                <div class="gc-label">Why</div>
+                <div class="gc-text">We believe technology should not just function; it should drive revenue. Every system we build is measured against that standard.</div>
+            </div>
+            <div class="gc-item">
+                <div class="gc-label">How</div>
+                <div class="gc-text">By leveraging enterprise-grade cloud infrastructure (AWS/Azure) and high-performance .NET architectures with zero unnecessary overhead.</div>
+            </div>
+            <div class="gc-item">
+                <div class="gc-label">What</div>
+                <div class="gc-text">We build web apps that convert and cloud systems that deliver. Specialized. Reliable. Profitable.</div>
+            </div>
+        </div>
+
+        <!-- Founder block -->
+        <div class="founder-block">
+            <div class="reveal">
+                <h2 class="founder-title">Gilbert<br />Mutai.</h2>
+                <p class="about-text">
+                    Founder and Lead Engineer of Gilbert Specialists Tech. A full-stack .NET specialist
+                    with a singular focus on conversion, reliability, and modern cloud engineering.
+                </p>
+                <p class="about-text">
+                    Based in Nairobi, available globally. Operating at the intersection of enterprise
+                    software architecture and practical business outcomes.
+                </p>
+            </div>
+            <div class="founder-detail reveal reveal-d1">
+                <div class="fd-item">
+                    <span class="fd-label">Specialization</span>
+                    <span class="fd-value">.NET / C# · Azure · Blazor WebAssembly</span>
+                </div>
+                <div class="fd-item">
+                    <span class="fd-label">Target Markets</span>
+                    <span class="fd-value">USA · Europe · C2C &amp; Freelance</span>
+                </div>
+                <div class="fd-item">
+                    <span class="fd-label">Entity</span>
+                    <span class="fd-value">Registered Sole Proprietorship · Kenya</span>
+                </div>
+                <div class="fd-item">
+                    <span class="fd-label">C2C Eligibility</span>
+                    <span class="fd-value">Eligible · Transparent business structure</span>
+                </div>
+                <div class="fd-item">
+                    <span class="fd-label">Availability</span>
+                    <span class="fd-value">Open to projects · Q2 2026 onwards</span>
+                </div>
+                <div class="fd-item">
+                    <span class="fd-label">Location</span>
+                    <span class="fd-value">Nairobi, Kenya · UTC+3</span>
+                </div>
+                <div class="cta-wrap">
+                    <a href="/contact" class="btn-primary">
+                        <span>Work with Gilbert</span><span class="arrow-right">→</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+@code {
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+            await JS.InvokeVoidAsync("GSTApp.initReveal");
+    }
+}

@@ -1,0 +1,144 @@
+@page "/services"
+@inject IJSRuntime JS
+
+<div class="page-header">
+    <div class="container">
+        <div class="ph-eyebrow"><div class="ph-eyebrow-line"></div><span>Capabilities</span></div>
+        <h1 class="ph-title">
+            <span class="line"><span>What</span></span>
+            <span class="line"><span class="accent">We Do.</span></span>
+        </h1>
+        <p class="ph-sub">Specialized across the full .NET ecosystem and Microsoft cloud stack. No generalists. No handoffs. Direct accountability at every layer of your system.</p>
+    </div>
+</div>
+
+<section class="services-section">
+    <div class="container">
+        <div class="section-label">
+            <div class="section-label-line"></div>
+            <span>Core Services</span>
+            <div class="section-label-num">6 Capabilities</div>
+        </div>
+        <div class="services-list">
+            <div class="service-item reveal">
+                <span class="svc-num">01</span>
+                <div class="svc-icon">◈</div>
+                <h3>Blazor WebAssembly Development</h3>
+                <p>End-to-end Blazor WASM applications with prerendering for instant load times. We architect for performance, SEO, and conversion — not just functionality. FCP &lt;1s guaranteed.</p>
+                <div class="svc-tags">
+                    <span class="tag">.NET 10</span><span class="tag">Blazor WASM</span>
+                    <span class="tag">SSG</span><span class="tag">C#</span><span class="tag">Prerendering</span>
+                </div>
+            </div>
+            <div class="service-item reveal reveal-d1">
+                <span class="svc-num">02</span>
+                <div class="svc-icon">⬡</div>
+                <h3>Azure Cloud Architecture</h3>
+                <p>Cost-optimized, resilient cloud systems. From Static Web Apps to Event-Driven microservices — built for scale at enterprise grade. $0/mo free-tier architectures available.</p>
+                <div class="svc-tags">
+                    <span class="tag">Azure</span><span class="tag">CDN</span>
+                    <span class="tag">CI/CD</span><span class="tag">GitHub Actions</span><span class="tag">Static Web Apps</span>
+                </div>
+            </div>
+            <div class="service-item reveal reveal-d2">
+                <span class="svc-num">03</span>
+                <div class="svc-icon">◎</div>
+                <h3>Legacy System Migration</h3>
+                <p>Safe, zero-downtime migrations from WPF, React, or legacy .NET to modern Blazor. We de-risk the transition and preserve every business rule — no functionality left behind.</p>
+                <div class="svc-tags">
+                    <span class="tag">WPF → Blazor</span><span class="tag">React → .NET</span><span class="tag">WCAG 2.0</span>
+                </div>
+            </div>
+            <div class="service-item reveal">
+                <span class="svc-num">04</span>
+                <div class="svc-icon">⬟</div>
+                <h3>Full-Stack .NET API Design</h3>
+                <p>Clean, RESTful API architecture with Entity Framework, SignalR, and advanced authentication patterns including biometric 2FA and digital signatures.</p>
+                <div class="svc-tags">
+                    <span class="tag">ASP.NET</span><span class="tag">EF Core</span>
+                    <span class="tag">SignalR</span><span class="tag">OAuth2</span>
+                </div>
+            </div>
+            <div class="service-item reveal reveal-d1">
+                <span class="svc-num">05</span>
+                <div class="svc-icon">◇</div>
+                <h3>Performance &amp; SEO Engineering</h3>
+                <p>FCP under 1 second on 4G networks, globally distributed via CDN. Core Web Vitals, structured metadata, and Lighthouse 100 optimization built in from day one.</p>
+                <div class="svc-tags">
+                    <span class="tag">CWV</span><span class="tag">SEO</span>
+                    <span class="tag">CDN</span><span class="tag">Lighthouse</span>
+                </div>
+            </div>
+            <div class="service-item reveal reveal-d2">
+                <span class="svc-num">06</span>
+                <div class="svc-icon">◉</div>
+                <h3>C2C Technical Consulting</h3>
+                <p>Available for Corp-to-Corp contracts with US and European firms. Embedded expertise, sprint-ready capacity, and transparent milestone delivery on all engagements.</p>
+                <div class="svc-tags">
+                    <span class="tag">C2C</span><span class="tag">Consulting</span>
+                    <span class="tag">Agile</span><span class="tag">Milestones</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="stack-section">
+    <div class="container">
+        <div class="section-label"><div class="section-label-line"></div><span>Technology Stack</span></div>
+        <div class="stack-grid">
+            <div class="reveal">
+                <h2 class="stack-heading">The Full<br />Stack.</h2>
+                <p class="stack-intro">Every technology in our stack is chosen deliberately. No fads. No unnecessary dependencies. Pure .NET and Microsoft cloud, used with precision.</p>
+            </div>
+            <div class="tech-groups reveal reveal-d1">
+                <div class="tech-group">
+                    <div class="tg-label">Frontend</div>
+                    <div class="tg-items"><span class="tag">Blazor WASM</span><span class="tag">Blazor Server</span><span class="tag">Razor</span><span class="tag">CSS Grid</span></div>
+                </div>
+                <div class="tech-group">
+                    <div class="tg-label">Backend</div>
+                    <div class="tg-items"><span class="tag">ASP.NET Core</span><span class="tag">EF Core</span><span class="tag">SignalR</span><span class="tag">Minimal APIs</span></div>
+                </div>
+                <div class="tech-group">
+                    <div class="tg-label">Cloud</div>
+                    <div class="tg-items"><span class="tag">Azure Static Web Apps</span><span class="tag">Azure Functions</span><span class="tag">Azure CDN</span><span class="tag">AWS</span></div>
+                </div>
+                <div class="tech-group">
+                    <div class="tg-label">Auth &amp; Security</div>
+                    <div class="tg-items"><span class="tag">OAuth2</span><span class="tag">OpenID Connect</span><span class="tag">Biometric 2FA</span><span class="tag">Digital Signatures</span></div>
+                </div>
+                <div class="tech-group">
+                    <div class="tg-label">DevOps</div>
+                    <div class="tg-items"><span class="tag">GitHub Actions</span><span class="tag">Azure DevOps</span><span class="tag">Docker</span></div>
+                </div>
+                <div class="tech-group">
+                    <div class="tg-label">Data</div>
+                    <div class="tg-items"><span class="tag">SQL Server</span><span class="tag">Flat-file JSON</span><span class="tag">Cosmos DB</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="services-cta">
+    <div class="container">
+        <div class="cta-row">
+            <div class="reveal">
+                <h3 class="cta-heading">Ready to build<br />something real?</h3>
+            </div>
+            <div class="reveal reveal-d1 cta-actions">
+                <a href="/contact" class="btn-primary"><span>Start a project</span><span class="arrow-right">→</span></a>
+                <a href="/work"    class="btn-secondary"><span>See our work</span><span class="arrow-right">→</span></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+@code {
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+            await JS.InvokeVoidAsync("GSTApp.initReveal");
+    }
+}

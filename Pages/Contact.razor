@@ -1,0 +1,171 @@
+@page "/contact"
+@inject IJSRuntime JS
+
+<div class="page-header">
+    <div class="container">
+        <div class="ph-eyebrow"><div class="ph-eyebrow-line"></div><span>Let's Build</span></div>
+        <h1 class="ph-title">
+            <span class="line"><span>Get In</span></span>
+            <span class="line"><span class="accent">Touch.</span></span>
+        </h1>
+        <p class="ph-sub">Available for high-value freelance projects and Corp-to-Corp contracts. Based in Nairobi, working for global markets. Response within 24 hours.</p>
+    </div>
+</div>
+
+<section class="contact-section">
+    <div class="container">
+        <div class="contact-grid">
+
+            <!-- ── Left: Details ────────────────────────── -->
+            <div>
+                <h2 class="contact-heading reveal">
+                    Let's<br />Work<br /><span>Together.</span>
+                </h2>
+                <p class="contact-sub reveal reveal-d1">
+                    Whether you need a full-stack .NET application, Azure architecture, a legacy
+                    migration, or an embedded C2C consultant — let's start with a conversation.
+                </p>
+                <div class="contact-info reveal reveal-d2">
+                    <div class="ci-item">
+                        <span class="ci-label">Email</span>
+                        <a href="mailto:gilbert@gilbertspecialists.tech" class="ci-value">
+                            gilbert@gilbertspecialists.tech
+                        </a>
+                    </div>
+                    <div class="ci-item">
+                        <span class="ci-label">Location</span>
+                        <span class="ci-value">Nairobi, Kenya · UTC+3</span>
+                    </div>
+                    <div class="ci-item">
+                        <span class="ci-label">Availability</span>
+                        <span class="ci-value">Open to C2C · Freelance · Q2 2026</span>
+                    </div>
+                    <div class="ci-item">
+                        <span class="ci-label">Entity Type</span>
+                        <span class="ci-value">Registered Sole Proprietorship · Kenya</span>
+                    </div>
+                    <div class="ci-item">
+                        <span class="ci-label">C2C Eligibility</span>
+                        <span class="ci-value">Eligible · Transparent business structure</span>
+                    </div>
+                    <div class="ci-item">
+                        <span class="ci-label">Response Time</span>
+                        <span class="ci-value">Within 24 hours · All timezones</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ── Right: Form ──────────────────────────── -->
+            <div class="reveal reveal-d1">
+                <EditForm Model="_model" OnValidSubmit="HandleSubmit">
+                    <DataAnnotationsValidator />
+
+                    <div class="form-row @(IsFocused("Name") ? "focused" : "") @(IsFilled("Name") ? "filled" : "")">
+                        <label class="form-label" for="fname">Full Name</label>
+                        <InputText id="fname" @bind-Value="_model.Name"
+                                   @onfocus="@(() => SetFocus("Name"))"
+                                   @onblur="@(() => ClearFocus("Name"))" />
+                        <div class="form-underline"></div>
+                    </div>
+
+                    <div class="form-row @(IsFocused("Company") ? "focused" : "") @(IsFilled("Company") ? "filled" : "")">
+                        <label class="form-label" for="fcompany">Company / Organization</label>
+                        <InputText id="fcompany" @bind-Value="_model.Company"
+                                   @onfocus="@(() => SetFocus("Company"))"
+                                   @onblur="@(() => ClearFocus("Company"))" />
+                        <div class="form-underline"></div>
+                    </div>
+
+                    <div class="form-row @(IsFocused("Email") ? "focused" : "") @(IsFilled("Email") ? "filled" : "")">
+                        <label class="form-label" for="femail">Email Address</label>
+                        <InputText id="femail" @bind-Value="_model.Email" type="email"
+                                   @onfocus="@(() => SetFocus("Email"))"
+                                   @onblur="@(() => ClearFocus("Email"))" />
+                        <div class="form-underline"></div>
+                    </div>
+
+                    <div class="form-row @(IsFocused("Budget") ? "focused" : "") @(IsFilled("Budget") ? "filled" : "")">
+                        <label class="form-label" for="fbudget">Budget Range (Optional)</label>
+                        <InputText id="fbudget" @bind-Value="_model.Budget"
+                                   @onfocus="@(() => SetFocus("Budget"))"
+                                   @onblur="@(() => ClearFocus("Budget"))" />
+                        <div class="form-underline"></div>
+                    </div>
+
+                    <div class="form-row @(IsFocused("Message") ? "focused" : "") @(IsFilled("Message") ? "filled" : "")">
+                        <label class="form-label" for="fmessage">Tell me about your project</label>
+                        <InputTextArea id="fmessage" @bind-Value="_model.Message"
+                                       @onfocus="@(() => SetFocus("Message"))"
+                                       @onblur="@(() => ClearFocus("Message"))" />
+                        <div class="form-underline"></div>
+                    </div>
+
+                    <button type="submit" class="submit-btn" disabled="@_sending">
+                        <span class="submit-inner">@(_sending ? "Sending →" : "Send Message →")</span>
+                    </button>
+
+                    @if (_sent)
+                    {
+                        <div class="form-success">
+                            ✓ Message sent — I'll be in touch within 24 hours.
+                        </div>
+                    }
+                </EditForm>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+@code {
+    private ContactModel _model  = new();
+    private string?      _focused = null;
+    private bool         _sending = false;
+    private bool         _sent    = false;
+
+    private void SetFocus(string field)  => _focused = field;
+    private void ClearFocus(string field){ if (_focused == field) _focused = null; }
+    private bool IsFocused(string field) => _focused == field;
+
+    private bool IsFilled(string field) => field switch
+    {
+        "Name"    => !string.IsNullOrEmpty(_model.Name),
+        "Company" => !string.IsNullOrEmpty(_model.Company),
+        "Email"   => !string.IsNullOrEmpty(_model.Email),
+        "Budget"  => !string.IsNullOrEmpty(_model.Budget),
+        "Message" => !string.IsNullOrEmpty(_model.Message),
+        _         => false
+    };
+
+    private async Task HandleSubmit()
+    {
+        _sending = true;
+        // Replace with your actual Formspree endpoint or API call
+        await Task.Delay(1200);
+        _sending = false;
+        _sent    = true;
+        _model   = new ContactModel();
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+            await JS.InvokeVoidAsync("GSTApp.initReveal");
+    }
+
+    private class ContactModel
+    {
+        [System.ComponentModel.DataAnnotations.Required]
+        public string Name    { get; set; } = "";
+        public string Company { get; set; } = "";
+
+        [System.ComponentModel.DataAnnotations.Required]
+        [System.ComponentModel.DataAnnotations.EmailAddress]
+        public string Email   { get; set; } = "";
+
+        public string Budget  { get; set; } = "";
+
+        [System.ComponentModel.DataAnnotations.Required]
+        public string Message { get; set; } = "";
+    }
+}

@@ -1,0 +1,176 @@
+/* ============================================================
+   Work.razor.css  —  CSS Isolation for the Work page.
+   ============================================================ */
+
+.work-section[b-uwj2wes745] {
+    background: var(--bg);
+    padding: 0;
+    transition: background 0.5s;
+}
+
+.section-label[b-uwj2wes745] {
+    padding: 72px 48px 0;
+}
+
+/* ── Cases List ───────────────────────────────────────────── */
+.cases-list[b-uwj2wes745] {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    background: var(--border);
+    transition: background 0.5s;
+}
+
+.case-study[b-uwj2wes745] {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    background: var(--bg);
+    transition: background 0.3s;
+}
+
+.case-study:hover[b-uwj2wes745] { background: var(--surface); }
+
+/* ── Case Meta (left column) ──────────────────────────────── */
+.cs-meta[b-uwj2wes745] {
+    padding: 60px 48px;
+    border-right: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 40px;
+    transition: border-color 0.5s;
+}
+
+.cs-tag[b-uwj2wes745] {
+    font-family: var(--mono);
+    font-size: 0.63rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--accent);
+    border: 1px solid rgba(255, 77, 0, 0.3);
+    padding: 6px 12px;
+    width: fit-content;
+}
+
+.cs-index[b-uwj2wes745] {
+    font-family: var(--display);
+    font-size: 5rem;
+    line-height: 1;
+    color: var(--text-dimmer);
+    letter-spacing: 0.02em;
+    transition: color 0.5s;
+}
+
+.cs-stack-label[b-uwj2wes745] {
+    font-family: var(--mono);
+    font-size: 0.58rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--text-dimmer);
+    margin-bottom: 8px;
+    transition: color 0.5s;
+}
+
+.cs-tech[b-uwj2wes745] {
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    color: var(--text-dim);
+    line-height: 1.7;
+    transition: color 0.5s;
+}
+
+/* ── Case Content (right column) ──────────────────────────── */
+.cs-content[b-uwj2wes745] {
+    padding: 60px 64px;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    gap: 36px;
+}
+
+.cs-title[b-uwj2wes745] {
+    font-family: var(--serif);
+    font-size: clamp(22px, 2.6vw, 38px);
+    line-height: 1.15;
+    color: var(--heading);
+    font-style: italic;
+    transition: color 0.5s;
+}
+
+.cs-sections[b-uwj2wes745] {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    align-items: start;
+}
+
+.cs-section-label[b-uwj2wes745] {
+    font-family: var(--mono);
+    font-size: 0.58rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 10px;
+}
+
+.cs-section-text[b-uwj2wes745] {
+    font-size: 0.87rem;
+    line-height: 1.7;
+    color: var(--text-dim);
+    transition: color 0.5s;
+}
+
+.cs-outcome-num[b-uwj2wes745] {
+    font-family: var(--display);
+    font-size: 2.5rem;
+    color: var(--heading);
+    letter-spacing: 0.02em;
+    line-height: 1;
+    margin-bottom: 8px;
+    transition: color 0.5s;
+}
+
+.cs-outcome-num span[b-uwj2wes745] { color: var(--accent); }
+
+/* ── Bottom CTA ───────────────────────────────────────────── */
+.work-cta[b-uwj2wes745] {
+    padding: 80px 48px;
+}
+
+.cta-row[b-uwj2wes745] {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 32px;
+}
+
+.cta-quote[b-uwj2wes745] {
+    font-family: var(--serif);
+    font-size: clamp(22px, 2.5vw, 36px);
+    font-style: italic;
+    color: var(--heading);
+    max-width: 500px;
+    transition: color 0.5s;
+}
+
+/* ── Responsive ───────────────────────────────────────────── */
+@media (max-width: 960px) {
+    .section-label[b-uwj2wes745] { padding: 56px 24px 0; }
+
+    .case-study[b-uwj2wes745] { grid-template-columns: 1fr; }
+
+    .cs-meta[b-uwj2wes745] {
+        border-right: none;
+        border-bottom: 1px solid var(--border);
+        padding: 32px 24px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .cs-content[b-uwj2wes745] { padding: 32px 24px; }
+    .cs-sections[b-uwj2wes745] { grid-template-columns: 1fr; gap: 24px; }
+    .work-cta[b-uwj2wes745] { padding: 60px 24px; }
+    .cta-row[b-uwj2wes745] { flex-direction: column; align-items: flex-start; }
+}
