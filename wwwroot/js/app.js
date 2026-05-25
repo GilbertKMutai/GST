@@ -40,7 +40,7 @@ window.GSTApp = (() => {
 
     // ── Theme ────────────────────────────────────────────────
     function restoreTheme() {
-        const saved = localStorage.getItem('gst-theme') || 'dark';
+        const saved = localStorage.getItem('gst-theme') || 'light';
         document.documentElement.setAttribute('data-theme', saved);
     }
 
