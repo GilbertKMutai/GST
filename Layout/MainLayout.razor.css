@@ -305,6 +305,11 @@ main {
     nav, nav.scrolled { padding: 18px 24px; }
 
     .nav-links, .nav-cta { display: none !important; }
+    
+
+    .nav-right {
+        margin-left: 16px;
+    }
 
     .hamburger { display: flex; }
     .mobile-menu { display: flex; }
