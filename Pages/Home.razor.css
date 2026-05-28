@@ -133,6 +133,7 @@
     text-transform: uppercase;
     color: var(--text-dim);
     margin-top: 4px;
+    max-width: 180px;
     transition: color 0.5s;
 }
 
@@ -356,10 +357,21 @@
 
 .cp-outcome span { color: var(--accent); }
 
+.cp-outcome-block {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+}
+
 .cp-outcome-label {
     font-size: 0.82rem;
     color: var(--text-dim);
     transition: color 0.5s;
+}
+
+.cp-outcome-label strong {
+    color: var(--heading);
+    font-weight: 500;
 }
 
 .cp-more {
@@ -379,6 +391,8 @@
 .cp-more::after { content: '→'; transition: transform 0.3s var(--ease); }
 .cp-more:hover  { color: var(--accent); }
 .cp-more:hover::after { transform: translateX(5px); }
+
+
 
 /* ── Process Overview List ────────────────────────────────── */
 .pp-list { display: flex; flex-direction: column; }
