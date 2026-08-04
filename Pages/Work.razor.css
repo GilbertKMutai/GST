@@ -96,6 +96,27 @@
     transition: color 0.5s;
 }
 
+.cs-media {
+    aspect-ratio: 16 / 7;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    background: var(--surface);
+}
+
+.cs-media img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    filter: saturate(0.94) contrast(1.04);
+    transition: transform 0.55s var(--ease), filter 0.35s;
+}
+
+.case-study:hover .cs-media img {
+    transform: scale(1.025);
+    filter: saturate(1) contrast(1.08);
+}
+
 .cs-sections {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -170,6 +191,7 @@
     }
 
     .cs-content { padding: 32px 24px; }
+    .cs-media { aspect-ratio: 4 / 3; }
     .cs-sections { grid-template-columns: 1fr; gap: 24px; }
     .work-cta { padding: 60px 24px; }
     .cta-row { flex-direction: column; align-items: flex-start; }

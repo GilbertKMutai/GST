@@ -34,6 +34,8 @@
     --noise:        0.028;
     --marquee-bg:   #101010;
     --cred-bg:      #080808;
+    --hero-overlay: linear-gradient(90deg, rgba(8, 8, 8, 0.92) 0%, rgba(8, 8, 8, 0.35) 42%, transparent 100%),
+        linear-gradient(0deg, rgba(8, 8, 8, 0.28) 0%, transparent 34%);
 }
 
 /* ── Light Theme ──────────────────────────────────────────── */
@@ -51,6 +53,8 @@
     --noise:        0.016;
     --marquee-bg:   #EAE6E0;
     --cred-bg:      #F5F1EB;
+    --hero-overlay: linear-gradient(90deg, rgba(245, 241, 235, 0.45) 0%, rgba(245, 241, 235, 0.15) 42%, transparent 100%),
+        linear-gradient(0deg, rgba(245, 241, 235, 0.16) 0%, transparent 34%);
 }
 
 /* ── Reset ────────────────────────────────────────────────── */
