@@ -87,7 +87,8 @@ nav.scrolled {
 }
 
 /* ── Theme Toggle ─────────────────────────────────────────── */
-.theme-toggle {
+.theme-toggle,
+.mobile-theme-toggle {
     position: relative;
     width: 48px; height: 26px;
     border: 1px solid var(--border-s);
@@ -96,6 +97,21 @@ nav.scrolled {
     cursor: none;
     flex-shrink: 0;
     transition: background 0.4s, border-color 0.4s;
+}
+
+.mobile-theme-toggle {
+    width: 48px;
+    height: 26px;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 13px;
+    color: var(--heading);
+    text-decoration: none;
+    background: var(--surface-2);
+    border-color: var(--border-s);
+    margin-bottom: 8px;
 }
 
 .toggle-track {
@@ -108,6 +124,14 @@ nav.scrolled {
     pointer-events: none;
     font-size: 9px;
     line-height: 1;
+}
+
+.mobile-theme-toggle .toggle-track {
+    position: relative;
+    inset: auto;
+    width: 48px;
+    height: 26px;
+    padding: 0 6px;
 }
 
 .t-sun  { color: var(--accent); opacity: 0; transition: opacity 0.3s; }
@@ -125,7 +149,13 @@ nav.scrolled {
     transition: transform 0.35s var(--ease);
 }
 
+.mobile-theme-toggle .toggle-thumb {
+    top: 4px;
+    left: 4px;
+}
+
 [data-theme="light"] .toggle-thumb { transform: translateX(22px); }
+[data-theme="light"] .mobile-theme-toggle .toggle-thumb { transform: translateX(22px); }
 
 /* ── Nav CTA Button ───────────────────────────────────────── */
 ::deep .nav-cta {
@@ -305,7 +335,6 @@ main {
     nav, nav.scrolled { padding: 18px 24px; }
 
     .nav-links, .nav-cta { display: none !important; }
-    
 
     .nav-right {
         margin-left: 16px;
@@ -316,4 +345,48 @@ main {
 
     .footer-grid { grid-template-columns: 1fr; gap: 40px; }
     .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
+}
+
+@media (max-width: 560px) {
+    nav, nav.scrolled {
+        padding: 14px 16px;
+        gap: 10px;
+        flex-wrap: nowrap;
+    }
+
+    ::deep .nav-logo {
+        font-size: clamp(0.95rem, 4vw, 1.15rem);
+        letter-spacing: 0.04em;
+        line-height: 1.1;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: min(52vw, 180px);
+        flex-shrink: 1;
+    }
+
+    .logo-dot {
+        width: 5px;
+        height: 5px;
+        flex-shrink: 0;
+    }
+
+    .nav-right {
+        margin-left: auto;
+        gap: 8px;
+    }
+
+    .theme-toggle {
+        width: 44px;
+        height: 24px;
+    }
+
+    .toggle-thumb {
+        width: 16px;
+        height: 16px;
+        top: 3px;
+        left: 3px;
+    }
+
+    [data-theme="light"] .toggle-thumb { transform: translateX(20px); }
 }

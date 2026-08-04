@@ -13,7 +13,17 @@
     position: relative;
     overflow: hidden;
     background: var(--bg);
+    isolation: isolate;
     transition: background 0.5s;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--hero-overlay);
+    pointer-events: none;
+    z-index: 0;
 }
 
 .hero-bg-line {
@@ -39,6 +49,61 @@
     margin: 0 auto;
     width: 100%;
     position: relative;
+    z-index: 2;
+}
+
+.hero-visual {
+    position: absolute;
+    top: 132px;
+    right: 48px;
+    width: min(42vw, 660px);
+    aspect-ratio: 16 / 10;
+    border: 1px solid var(--border-s);
+    overflow: hidden;
+    z-index: 1;
+    opacity: 0;
+    animation: fadeUp 0.9s var(--ease) 0.75s forwards;
+}
+
+.hero-visual img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.hero-visual::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 48%, rgba(0, 0, 0, 0.72) 100%);
+    pointer-events: none;
+}
+
+.hero-visual figcaption {
+    position: absolute;
+    left: 24px;
+    right: 24px;
+    bottom: 22px;
+    z-index: 1;
+    display: grid;
+    gap: 6px;
+}
+
+.hero-visual figcaption span {
+    font-family: var(--mono);
+    font-size: 0.58rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--accent);
+}
+
+.hero-visual figcaption strong {
+    max-width: 360px;
+    font-size: 0.95rem;
+    line-height: 1.35;
+    color: #fff;
+    font-weight: 500;
 }
 
 .hero-eyebrow {
@@ -83,6 +148,15 @@
 
 .accent-w { color: var(--accent); }
 
+.hero-actions {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-top: 36px;
+    opacity: 0;
+    animation: fadeUp 0.8s var(--ease) 0.95s forwards;
+}
+
 .hero-bottom {
     display: flex;
     align-items: flex-end;
@@ -93,6 +167,8 @@
     width: 100%;
     border-top: 1px solid var(--border);
     transition: border-color 0.5s;
+    position: relative;
+    z-index: 2;
 }
 
 .hero-desc {
@@ -319,6 +395,28 @@
 
 .cp-item:hover { background: var(--surface); }
 
+.cp-image {
+    aspect-ratio: 4 / 3;
+    margin: -20px -16px 8px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    background: var(--surface);
+}
+
+.cp-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    filter: saturate(0.92) contrast(1.04);
+    transition: transform 0.55s var(--ease), filter 0.35s;
+}
+
+.cp-item:hover .cp-image img {
+    transform: scale(1.035);
+    filter: saturate(1) contrast(1.08);
+}
+
 .cp-tag {
     font-family: var(--mono);
     font-size: 0.63rem;
@@ -487,8 +585,29 @@
 
 /* ── Responsive ───────────────────────────────────────────── */
 @media (max-width: 960px) {
-    .hero { padding: 0 24px; }
+    .hero {
+        display: flex;
+        flex-direction: column;
+        padding: 0 24px;
+    }
+
+    .hero::after { background: linear-gradient(0deg, var(--bg) 0%, transparent 44%); }
     .hero-bg-line { display: none; }
+    .hero-content {
+        order: 1;
+        padding-top: 112px;
+        padding-bottom: 36px;
+    }
+
+    .hero-visual {
+        order: 2;
+        position: relative;
+        top: auto;
+        right: auto;
+        width: 100%;
+        margin: 0;
+    }
+
     .hero-bottom { flex-direction: column; gap: 36px; align-items: flex-start; padding-bottom: 48px; }
     .hero-stats  { gap: 28px; }
     .stat { text-align: left; }
@@ -497,7 +616,18 @@
     .ov-grid-2  { grid-template-columns: 1fr; gap: 48px; }
     .ov-grid-3  { grid-template-columns: 1fr; }
     .case-preview { grid-template-columns: 1fr; }
+    .cp-item { padding: 36px 24px; }
+    .cp-image { margin: -8px 0 4px; }
     .creds-section { padding: 60px 24px; }
     .creds-row { grid-template-columns: repeat(2, 1fr); }
     .pp-step { grid-template-columns: 52px 1fr auto; }
+}
+
+@media (max-width: 640px) {
+    .hero-title { font-size: clamp(56px, 18vw, 88px); }
+    .hero-actions a { width: 100%; justify-content: center; }
+    .hero-stats { flex-direction: column; gap: 24px; }
+    .hero-visual figcaption { left: 18px; right: 18px; bottom: 18px; }
+    .creds-row { grid-template-columns: 1fr; }
+    .pp-step { grid-template-columns: 1fr; }
 }

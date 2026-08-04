@@ -4,6 +4,13 @@
 
 <!-- Mobile Menu (portal-level, sits outside page component tree) -->
 <div class="mobile-menu @(_menuOpen ? "open" : "")" id="mm">
+    <button class="mobile-theme-toggle" @onclick="ToggleTheme" aria-label="Toggle theme">
+        <div class="toggle-track">
+            <span class="t-sun">☀</span>
+            <span class="t-moon">☽</span>
+        </div>
+        <div class="toggle-thumb"></div>
+    </button>
     <NavLink href="/" class="mob-link" Match="NavLinkMatch.All" @onclick="CloseMenu">Home</NavLink>
     <NavLink href="/about"    class="mob-link" @onclick="CloseMenu">About</NavLink>
     <NavLink href="/services" class="mob-link" @onclick="CloseMenu">Services</NavLink>
@@ -31,13 +38,6 @@
     </ul>
 
     <div class="nav-right ">
-        <button class="theme-toggle" @onclick="ToggleTheme" aria-label="Toggle theme">
-            <div class="toggle-track">
-                <span class="t-sun">☀</span>
-                <span class="t-moon">☽</span>
-            </div>
-            <div class="toggle-thumb"></div>
-        </button>
         <NavLink href="/contact" class="nav-cta">Start a Project</NavLink>
         <button class="hamburger @(_menuOpen ? "open" : "")"
                 @onclick="ToggleMenu" aria-label="Menu">
