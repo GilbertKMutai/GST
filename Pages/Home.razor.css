@@ -165,7 +165,6 @@
     max-width: 1400px;
     margin: 60px auto 0;
     width: 100%;
-    border-top: 1px solid var(--border);
     transition: border-color 0.5s;
     position: relative;
     z-index: 2;
