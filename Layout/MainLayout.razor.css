@@ -341,7 +341,15 @@ main {
     }
 
     .hamburger { display: flex; }
-    .mobile-menu { display: flex; }
+    .mobile-menu {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 96px 24px 48px;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        box-sizing: border-box;
+    }
 
     .footer-grid { grid-template-columns: 1fr; gap: 40px; }
     .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
