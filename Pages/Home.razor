@@ -2,375 +2,232 @@
 @inject IJSRuntime JS
 
 <!-- ── HERO ──────────────────────────────────────────────── -->
-<section class="hero" id="hero">
-    <div class="hero-bg-line"></div>
-    <div class="hero-bg-line"></div>
-    <div class="hero-bg-line"></div>
-    <div class="hero-bg-line"></div>
-
-    <figure class="hero-visual reveal reveal-d1">
-        <img src="/images/gst-hero-engineering.webp"
-        <figcaption>
-            <span>Cloud-ready delivery</span>
-            <strong>.NET systems designed for measurable operating gains.</strong>
-        </figcaption>
-    </figure>
-
-    <div class="hero-content">
-        <div class="hero-eyebrow">
-            <div class="hero-eyebrow-line"></div>
-            <span>Nairobi, Kenya · Serving Global Teams</span>
+<section class="hero">
+    <div class="container">
+        <div class="byline reveal">
+            <img src="/images/gilbert-mutai.webp" alt="Gilbert Mutai" />
+            <span><strong>Gilbert Mutai</strong> · Founder, Gilbert Specialists Tech</span>
         </div>
-        <h1 class="hero-title">
-            <span class="hero-title-line"><span>Engineering</span></span>
-            <span class="hero-title-line"><span class="accent-w">Digital</span></span>
-            <span class="hero-title-line"><span>Authority.</span></span>
+
+        <h1 class="display-1 hero-title reveal reveal-d1">
+            Software built to <span class="accent">last</span>, not just to launch.
         </h1>
-        <div class="hero-actions">
-            <a href="/contact" class="btn-primary">
-                <span>Start a project</span><span class="arrow-right">→</span>
-            </a>
-            <a href="/work" class="btn-secondary">
-                <span>See proof</span><span class="arrow-right">→</span>
-            </a>
-        </div>
-    </div>
 
-    <div class="hero-bottom">
-        <p class="hero-desc">
-           We build high-performance Blazor, .NET, and cloud systems for companies that need reliable software, clean architecture, and measurable business outcomes.
-           From legacy modernization to cloud-ready web applications, we help international teams move faster without compromising quality.
+        <p class="lead reveal reveal-d2">
+            We design and ship .NET, Blazor, and cloud systems for teams who'd rather build it
+            right the first time. Nairobi-based. Trusted by teams in Singapore, the Netherlands,
+            and the United States.
         </p>
-        <div class="hero-stats">
+
+        <div class="btn-row reveal reveal-d2">
+            <a href="/contact" class="btn btn-primary">Start a project →</a>
+            <a href="/work" class="btn-text">See the work <span class="arrow">→</span></a>
+        </div>
+
+        <div class="stat-row hero-stats reveal reveal-d3">
             <div class="stat">
-                <div class="stat-num">60<span class="u">%</span></div>
-                <div class="stat-label">Reduction in administration time</div>
+                <div class="num"><em>60%</em></div>
+                <div class="label">Faster check-in workflow for a Netherlands PropTech client</div>
             </div>
             <div class="stat">
-                <div class="stat-num">12K<span class="u">+</span></div>
-                <div class="stat-label">Users supported across institutional platforms</div>
+                <div class="num">12K<em>+</em></div>
+                <div class="label">Users on institutional software we've shipped</div>
             </div>
             <div class="stat">
-                <div class="stat-num">5<span class="u">+</span></div>
-                <div class="stat-label">International organizations supported</div>
-            </div>
-        </div>
-    </div>
-
-    <div class="scroll-indicator">
-        <div class="scroll-line"></div>
-        <span>Scroll</span>
-    </div>
-</section>
-
-<!-- ── MARQUEE ───────────────────────────────────────────── -->
-<div class="marquee-strip">
-    <div class="marquee-track">
-        <span class="marquee-item"><span class="marquee-dot"></span>Blazor WebAssembly</span>
-        <span class="marquee-item"><span class="marquee-dot"></span>Blazor Server</span>
-        <span class="marquee-item"><span class="marquee-dot"></span>Blazor Web App</span>
-        <span class="marquee-item"><span class="marquee-dot"></span>Azure Architecture</span>
-        <span class="marquee-item"><span class="marquee-dot"></span>AWS Architecture</span>
-        <span class="marquee-item"><span class="marquee-dot"></span>.NET 5+</span>
-        <span class="marquee-item"><span class="marquee-dot"></span>Legacy Migration</span>
-        <span class="marquee-item"><span class="marquee-dot"></span>Static Site Generation</span>
-        <span class="marquee-item"><span class="marquee-dot"></span>Conversion Engineering</span>
-        <span class="marquee-item"><span class="marquee-dot"></span>USA / Europe Markets</span>
-        <span class="marquee-item"><span class="marquee-dot"></span>Cloud Deployment</span>
-        <span class="marquee-item"><span class="marquee-dot"></span>Blazor WebAssembly</span>
-        <span class="marquee-item"><span class="marquee-dot"></span>Blazor Server</span>
-        <span class="marquee-item"><span class="marquee-dot"></span>Blazor Web App</span>
-        <span class="marquee-item"><span class="marquee-dot"></span>Azure Architecture</span>
-        <span class="marquee-item"><span class="marquee-dot"></span>AWS Architecture</span>
-        <span class="marquee-item"><span class="marquee-dot"></span>.NET 5+</span>
-        <span class="marquee-item"><span class="marquee-dot"></span>Legacy Migration</span>
-        <span class="marquee-item"><span class="marquee-dot"></span>Static Site Generation</span>
-        <span class="marquee-item"><span class="marquee-dot"></span>Conversion Engineering</span>
-        <span class="marquee-item"><span class="marquee-dot"></span>USA / Europe Markets</span>
-        <span class="marquee-item"><span class="marquee-dot"></span>Cloud Deployment</span>
-    </div>
-</div>
-
-<!-- ── ABOUT OVERVIEW ────────────────────────────────────── -->
-<section class="overview-section">
-    <div class="container">
-        <div class="section-label">
-            <div class="section-label-line"></div>
-            <span>The Consultancy</span>
-        </div>
-        <div class="ov-grid-2">
-            <div class="reveal">
-                <h2 class="ov-subheading">
-                    We don’t just build <em>software</em>.<br />We solve <em>operational problems</em> with engineering.
-                </h2>
-            </div>
-            <div>
-                <p class="ov-text reveal">
-                    Gilbert Specialists Tech is a specialized .NET and cloud engineering consultancy based in 
-                    Nairobi, Kenya, serving clients across international markets.
-                </p>
-                <p class="ov-text reveal reveal-d1">
-                    We help startups, software companies, and enterprise teams build modern web 
-                    applications, migrate legacy systems, improve performance, and deliver cleaner digital 
-                    workflows using the Microsoft technology stack.
-                </p>
-                <p class="ov-text reveal reveal-d2">
-                    As a registered, technical consultancy, we operate with the structural transparency and strict cross-border compliance that international procurement requires. We are fully equipped for frictionless, compliant vendor onboarding - including IRS Form <strong>W-8BEN</strong> processing for US entities and international independent contractor frameworks that eliminate global labor misclassification risks. Every engagement is architected for seamless integration, elite technical execution, and measurable business impact.
-                </p>
-                <p class="ov-text reveal reveal-d2">
-                    For international clients, we operate as a professional remote
-                    technology partner with clear communication, structured delivery, and contract-ready engagement models.
-                </p>
-                <div class="ov-cta-row reveal">
-                    <a href="/about" class="btn-secondary">
-                        <span>Learn more about us</span><span class="arrow-right">→</span>
-                    </a>
-                </div>
+                <div class="num">4<em>+</em></div>
+                <div class="label">Years turning legacy systems into modern ones</div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- ── SERVICES OVERVIEW ──────────────────────────────────── -->
-<section class="overview-section alt-bg">
+<!-- ── PROBLEM / SOLUTION ────────────────────────────────── -->
+<section class="section section-alt section-border-t">
     <div class="container">
-        <div class="section-label">
-            <div class="section-label-line"></div>
-            <span>Capabilities</span>
-        </div>
-        <div class="ov-grid-2 mb-60">
-            <div class="reveal">
-                <h2 class="ov-heading">What<br />We Build.</h2>
+        <span class="eyebrow-kicker reveal">Why teams switch to us</span>
+        <h2 class="display-2 reveal" style="max-width:640px;margin-bottom:40px;">
+            Most software work goes wrong before anyone writes a line of code.
+        </h2>
+        <div class="compare reveal reveal-d1">
+            <div class="compare-col">
+                <h3>The usual agency</h3>
+                <ul>
+                    <li><span class="mark">—</span> An account manager stands between you and the engineer</li>
+                    <li><span class="mark">—</span> Estimates are vague, and scope quietly grows</li>
+                    <li><span class="mark">—</span> You inherit architecture nobody wants to touch</li>
+                    <li><span class="mark">—</span> Progress is a status call, not working software</li>
+                </ul>
             </div>
-            <div class="reveal reveal-d1 self-end">
-                <p class="ov-text">Focused engineering across the .NET ecosystem; from modern Blazor frontends to scalable backend systems, cloud deployments, and legacy modernization.</p>
-                <div class="ov-cta-row">
-                    <a href="/services" class="btn-secondary">
-                        <span>View all capabilities</span><span class="arrow-right">→</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="ov-grid-3">
-            <div class="mini-card reveal">
-                <span class="mc-num">01</span>
-                <div class="mc-icon">◈</div>
-                <div class="mc-title">Blazor Web Application Development</div>
-                <div class="mc-text">We design and build modern Blazor applications using WebAssembly, 
-                    Server, and the unified Blazor Web App model.
-                    <br />
-                    <br />
-                    Whether you need a customer portal, internal dashboard, SaaS interface, or enterprise workflow system, we 
-                    build applications that are fast, maintainable, and ready for real users.
-                </div>
-                <a href="/services" class="mc-link">View details →</a>
-            </div>
-            <div class="mini-card reveal reveal-d1">
-                <span class="mc-num">02</span>
-                <div class="mc-icon">⬡</div>
-                <div class="mc-title">Azure Cloud Architecture</div>
-                <div class="mc-text">Cost-optimized, resilient cloud systems built for enterprise scale from Static Web Apps to microservices.</div>
-                <a href="/services" class="mc-link">View details →</a>
-            </div>
-             <div class="mini-card reveal reveal-d2">
-                <span class="mc-num">03</span>
-                <div class="mc-icon">⌬</div>
-                <div class="mc-title">AWS Cloud Architecture</div>
-                <div class="mc-text">
-                    Scalable AWS environments designed for secure hosting, storage, networking,
-                    deployment, and cost-efficient cloud operations.
-                </div>
-                <a href="/services" class="mc-link">View details →</a>
-            </div>
-            <div class="mini-card reveal">
-                <span class="mc-num">04</span>
-                <div class="mc-icon">◎</div>
-                <div class="mc-title">Legacy System Modernization</div>
-                <div class="mc-text">
-                    We migrate outdated systems into modern .NET and Blazor architectures without disrupting 
-                    business operations.
-                    <br />
-                    <br />
-                    This includes moving from WPF, React, older .NET applications, manual 
-                    workflows, and fragmented systems into cleaner, web-based platforms that are easier to maintain and scale.</div>
-                <a href="/services" class="mc-link">View details →</a>
+            <div class="compare-col is-solution">
+                <h3>Gilbert Specialists Tech</h3>
+                <ul>
+                    <li><span class="mark">→</span> You talk directly to the engineer building it</li>
+                    <li><span class="mark">→</span> Scope and cost are fixed before anyone touches a keyboard</li>
+                    <li><span class="mark">→</span> Clean, documented architecture from day one</li>
+                    <li><span class="mark">→</span> You see deployable milestones, not just updates</li>
+                </ul>
             </div>
         </div>
     </div>
 </section>
 
-<!-- ── TAGLINE STRIP ──────────────────────────────────────── -->
-<div class="tagline-strip">
-    <div class="tagline-text">
-        Modern .NET Applications.&nbsp;&nbsp;&nbsp;Cleaner Business Workflows.&nbsp;&nbsp;&nbsp;Cloud Systems That Scale.&nbsp;&nbsp;&nbsp;Software Built To Last.&nbsp;&nbsp;&nbsp;Engineering Your Next Level of Growth.&nbsp;&nbsp;&nbsp;
-        Modern .NET Applications.&nbsp;&nbsp;&nbsp;Cleaner Business Workflows.&nbsp;&nbsp;&nbsp;Cloud Systems That Scale.&nbsp;&nbsp;&nbsp;Software Built To Last.&nbsp;&nbsp;&nbsp;Engineering Your Next Level of Growth.&nbsp;&nbsp;&nbsp;
-    </div>
-</div>
-
-<!-- ── CASE STUDIES OVERVIEW ─────────────────────────────── -->
-<section class="overview-section">
+<!-- ── CAPABILITIES PREVIEW ──────────────────────────────── -->
+<section class="section">
     <div class="container">
-        <div class="section-label">
-            <div class="section-label-line"></div>
-            <span>Selected Work</span>
+        <div class="section-head reveal">
+            <span class="eyebrow-kicker">Capabilities</span>
+            <h2 class="display-2">A few things we do well.</h2>
         </div>
-        <div class="ov-grid-2 mb-60 align-end">
-            <div class="reveal"><h2 class="ov-heading">Case<br />Studies.</h2></div>
-            <div class="reveal reveal-d1">
-                <a href="/work" class="btn-secondary">
-                    <span>View all work</span><span class="arrow-right">→</span>
-                </a>
+        <div class="grid-4 caps-grid">
+            <div class="card reveal">
+                <div class="display-3">Blazor development</div>
+                <p>Modern web apps built with Blazor Server, WebAssembly, and the unified Blazor Web App model.</p>
+                <a href="/services" class="btn-text">Learn more <span class="arrow">→</span></a>
+            </div>
+            <div class="card reveal reveal-d1">
+                <div class="display-3">Azure architecture</div>
+                <p>Cost-aware, resilient cloud systems, from static web apps to serverless workflows.</p>
+                <a href="/services" class="btn-text">Learn more <span class="arrow">→</span></a>
+            </div>
+            <div class="card reveal reveal-d2">
+                <div class="display-3">AWS architecture</div>
+                <p>Secure, scalable AWS environments for hosting, storage, and global content delivery.</p>
+                <a href="/services" class="btn-text">Learn more <span class="arrow">→</span></a>
+            </div>
+            <div class="card reveal reveal-d3">
+                <div class="display-3">Legacy migration</div>
+                <p>Moving WPF, React, and ageing .NET systems onto modern Blazor without disrupting the business.</p>
+                <a href="/services" class="btn-text">Learn more <span class="arrow">→</span></a>
             </div>
         </div>
-        <div class="case-preview">
-            <div class="cp-item reveal">
-                <div class="cp-image">
-                    <img src="/images/case-library-portal.webp"
-                         alt="Library portal interface mockup shown on tablet screens"
-                         loading="lazy" />
-                </div>
-                <div class="cp-tag">Library Systems · Singapore</div>
-                <div class="cp-num">01</div>
-                <div class="cp-title">Rebuilding an Existing React Library Platform as a Customized Blazor Solution</div>
-                <div class="cp-outcome-block">
-                    <div class="cp-outcome">50<span>%</span></div>
-                </div>
-                <div class="cp-outcome-label"><strong>Reduction</strong> in maintenance effort &nbsp;·&nbsp; Customized workflows &nbsp;·&nbsp; Accessible user experience</div>
-                <a href="/work" class="cp-more">Read case study</a>
-            </div>
-            <div class="cp-item reveal reveal-d1">
-                <div class="cp-image">
-                    <img src="/images/case-rental-checkin.webp"
-                         alt="Rental check-in workflow software mockup on laptop and tablet"
-                         loading="lazy" />
-                </div>
-                <div class="cp-tag">PropTech · Netherlands</div>
-                <div class="cp-num">02</div>
-                <div class="cp-title">Reducing Check-In Times by 60% via Custom .NET Architecture</div>
-                <div class="cp-outcome">60<span>%</span></div>
-                <div class="cp-outcome-label"><strong>Faster</strong> administration time &nbsp;·&nbsp; Digital check-ins &nbsp;·&nbsp; Document automation &nbsp;·&nbsp; Secure guest workflows</div>
-                <a href="/work" class="cp-more">Read case study</a>
-            </div>
+        <div class="btn-row" style="margin-top:36px;">
+            <a href="/services" class="btn btn-secondary">View all capabilities →</a>
         </div>
     </div>
 </section>
 
-<!-- ── PROCESS OVERVIEW ───────────────────────────────────── -->
-<section class="overview-section alt-bg">
+<!-- ── CASE STUDIES PREVIEW ──────────────────────────────── -->
+<section class="section section-alt section-border-t">
     <div class="container">
-        <div class="section-label">
-            <div class="section-label-line"></div>
-            <span>The Method</span>
+        <div class="section-head reveal">
+            <span class="eyebrow-kicker">Selected work</span>
+            <h2 class="display-2">Proof, not promises.</h2>
         </div>
-        <div class="ov-grid-2 mb-60">
-            <div class="reveal"><h2 class="ov-heading">Our<br />Process.</h2></div>
-            <div class="reveal reveal-d1 self-end">
-                <p class="ov-text">Every engagement follows a structured process designed to reduce risk, protect scope, and keep delivery aligned with business outcomes.</p>
-                <div class="ov-cta-row">
-                    <a href="/process" class="btn-secondary">
-                        <span>See the full process</span><span class="arrow-right">→</span>
-                    </a>
+        <div class="grid-3">
+            <a href="/work" class="case-card reveal">
+                <div class="case-img">
+                    <img src="https://images.pexels.com/photos/1837726/pexels-photo-1837726.jpeg?auto=compress&cs=tinysrgb&w=800"
+                         alt="Modern library interior with open staircases" loading="lazy" />
                 </div>
-            </div>
+                <div class="case-tag">Government · Education</div>
+                <h3 class="display-3">A white-label library portal, rebuilt in Blazor</h3>
+                <div class="case-outcome">100<span>%</span> reusable across institutions</div>
+            </a>
+            <a href="/work" class="case-card reveal reveal-d1">
+                <div class="case-img">
+                    <img src="https://images.pexels.com/photos/28606651/pexels-photo-28606651.jpeg?auto=compress&cs=tinysrgb&w=800"
+                         alt="Modern residential building in the Netherlands" loading="lazy" />
+                </div>
+                <div class="case-tag">PropTech · Netherlands</div>
+                <h3 class="display-3">Cutting rental check-in time with custom .NET</h3>
+                <div class="case-outcome">60<span>%</span> faster check-ins</div>
+            </a>
+            <a href="/work" class="case-card reveal reveal-d2">
+                <div class="case-img">
+                    <img src="https://images.pexels.com/photos/3855771/pexels-photo-3855771.jpeg?auto=compress&cs=tinysrgb&w=800"
+                         alt="Mechanic working in an automotive repair shop" loading="lazy" />
+                </div>
+                <div class="case-tag">Automotive · Operations</div>
+                <h3 class="display-3">Migrating a legacy invoicing system from WPF to Blazor</h3>
+                <div class="case-outcome">Web<span>-based</span>, built to scale</div>
+            </a>
         </div>
-        <div class="pp-list reveal">
-            <div class="pp-step">
-                <div class="pp-num">01</div>
-                <div class="pp-body"><h4>Discovery &amp; Problem Definition</h4>
-                    <p>
-                       We start by understanding the business problem, the users, the workflow, and the outcome the software is expected to create.
-                       <br />
-                       <br />
-                       No assumptions. No premature technology decisions.
-                    </p>
-                </div>
-                <div class="pp-arrow">→</div>
-            </div>
-            <div class="pp-step">
-                <div class="pp-num">02</div>
-                <div class="pp-body"><h4>Architecture &amp; Technical Planning</h4>
-                    <p>
-                        Before development begins, we define the system architecture, data flow, integrations, security requirements, and delivery milestones.
-                        <br />
-                        <br />
-                        This gives every stakeholder clarity before code is written.
-                    </p>
-                </div>
-                <div class="pp-arrow">→</div>
-            </div>
-            <div class="pp-step">
-                <div class="pp-num">03</div>
-                <div class="pp-body"><h4>Milestone-Based Delivery</h4>
-                    <p>
-                        Work is delivered in clear, reviewable milestones so progress is visible and feedback is captured early.
-                        <br />
-                        <br />
-                        You see working software throughout the engagement, not just at the end.
-                    </p>
-                </div>
-                <div class="pp-arrow">→</div>
-            </div>
-            <div class="pp-step">
-                <div class="pp-num">04</div>
-                <div class="pp-body"><h4>Testing, Deployment & Outcome Review</h4>
-                    <p>
-                        We validate the system against the goals defined during discovery, prepare it for 
-                        production, and ensure it is stable, usable, and maintainable.
-                    </p>
-                </div>
-                <div class="pp-arrow">→</div>
-            </div>
+        <div class="btn-row" style="margin-top:36px;">
+            <a href="/work" class="btn btn-secondary">Read the case studies →</a>
         </div>
     </div>
 </section>
 
-<!-- ── CREDENTIALS ────────────────────────────────────────── -->
-<div class="creds-section">
+<!-- ── PROCESS PREVIEW ────────────────────────────────────── -->
+<section class="section">
     <div class="container">
-        <div class="creds-row">
-            <div class="cred-item reveal reveal-d1">
-                <div class="cred-num">4<em>+</em> Years</div>
-                <div class="cred-label">Software development experience.</div>
-            </div>
-            <div class="cred-item reveal reveal-d2">
-                <div class="cred-num"><em>Global</em> Delivery</div>
-                <div class="cred-label">Experience with clients and companies across the world - Singapore, the Netherlands, and the USA</div>
-            </div>
-            <div class="cred-item reveal">
-                <div class="cred-num">12<em>K+</em></div>
-                <div class="cred-label">Users supported across institutional software platforms</div>
-            </div>
-            <div class="cred-item reveal reveal-d3">
-                <div class="cred-num">Contract-<em>Ready</em></div>
-                <div class="cred-label">Available for freelance, remote, and company-to-company software engagements</div>
-            </div>
+        <div class="section-head reveal">
+            <span class="eyebrow-kicker">The method</span>
+            <h2 class="display-2">Four steps. No surprises.</h2>
         </div>
-    </div>
-</div>
-
-<!-- ── CONTACT CTA ────────────────────────────────────────── -->
-<section class="overview-section">
-    <div class="container">
-        <div class="ov-grid-2">
-            <div class="reveal">
-                <h2 class="ov-heading cta-heading">Let's<br />Build<br /><span class="accent-w">Together.</span></h2>
-            </div>
-            <div class="self-center">
-                <p class="ov-text reveal reveal-d1">
-                    Great software does more than function. It moves businesses forward, 
-                    simplifies complex operations, and creates digital experiences people
-                    trust. If you are building something important, we can help you bring 
-                    it to life with clarity, precision, and engineering discipline.
-                </p>
-                <div class="ov-cta-row reveal reveal-d2">
-                    <a href="/contact" class="btn-primary">
-                        <span>Start a project</span><span class="arrow-right">→</span>
-                    </a>
-                    <a href="/work" class="btn-secondary">
-                        <span>View our work</span><span class="arrow-right">→</span>
-                    </a>
+        <div class="pp-list reveal reveal-d1">
+            <div class="pp-row">
+                <span class="pp-num">01</span>
+                <div>
+                    <h4>Discovery &amp; problem definition</h4>
+                    <p>We start with the business problem, not the technology. No premature decisions.</p>
                 </div>
             </div>
+            <div class="pp-row">
+                <span class="pp-num">02</span>
+                <div>
+                    <h4>Architecture &amp; technical planning</h4>
+                    <p>Stack, data model, and delivery milestones are approved before code is written.</p>
+                </div>
+            </div>
+            <div class="pp-row">
+                <span class="pp-num">03</span>
+                <div>
+                    <h4>Milestone-based delivery</h4>
+                    <p>You see working, deployable software throughout the engagement, not just at the end.</p>
+                </div>
+            </div>
+            <div class="pp-row">
+                <span class="pp-num">04</span>
+                <div>
+                    <h4>Testing, deployment &amp; review</h4>
+                    <p>We validate against the goals set in discovery, then ship it into production.</p>
+                </div>
+            </div>
+        </div>
+        <div class="btn-row" style="margin-top:8px;">
+            <a href="/process" class="btn-text">See the full process <span class="arrow">→</span></a>
+        </div>
+    </div>
+</section>
+
+<!-- ── FOUNDER WORD ───────────────────────────────────────── -->
+<section class="section section-alt section-border-t">
+    <div class="container grid-2 founder-word">
+        <div class="reveal">
+            <img src="/images/gilbert-mutai.webp" alt="Gilbert Mutai" class="fw-photo" />
+            <div class="fw-name">Gilbert Mutai</div>
+            <div class="fw-role">Founder &amp; Lead Engineer</div>
+        </div>
+        <div class="reveal reveal-d1">
+            <span class="eyebrow-kicker">A word from Gilbert</span>
+            <ul class="fw-list">
+                <li>I got into this work because I liked watching a broken workflow become a simple one.</li>
+                <li>Most software doesn't fail for a dramatic reason. It fails because nobody protected the
+                    fundamentals: honest estimates, clear architecture, and code someone else can still
+                    read after you're gone.</li>
+                <li>There's an old piece of wisdom about counting the cost before building the tower.
+                    That's the whole method, really - understand what you're building, and why, before
+                    anyone touches a keyboard.</li>
+                <li>I'm not the fastest way to ship a throwaway prototype. I'm the dependable way to ship
+                    something your business can still run on in five years.</li>
+                <li>Based in Nairobi. Built for teams in the US, Europe, and beyond.</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- ── FINAL CTA ──────────────────────────────────────────── -->
+<section class="section final-cta">
+    <div class="container">
+        <h2 class="display-2 reveal" style="max-width:600px;">Let's build something worth maintaining.</h2>
+        <p class="lead reveal reveal-d1" style="margin:20px 0 32px;">
+            Bring the problem you're trying to solve. We'll help you turn it into a stable,
+            well-architected system - not just a demo that works on launch day.
+        </p>
+        <div class="btn-row reveal reveal-d2">
+            <a href="/contact" class="btn btn-primary">Start a project →</a>
+            <a href="/work" class="btn btn-secondary">View our work</a>
         </div>
     </div>
 </section>

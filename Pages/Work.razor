@@ -3,232 +3,148 @@
 
 <div class="page-header">
     <div class="container">
-        <div class="ph-eyebrow">
-            <div class="ph-eyebrow-line"></div><span>Selected Work</span>
-        </div>
-        <h1 class="ph-title">
-            <span class="line"><span>Case</span></span>
-            <span class="line"><span class="accent">Studies.</span></span>
-        </h1>
-        <p class="ph-sub">
-            Proof, not promises. Every engagement starts with a real business constraint, moves through
-            focused engineering, and ends with a measurable result.
+        <span class="eyebrow reveal"><span class="dot"></span>Selected work</span>
+        <h1 class="page-title reveal reveal-d1">Case studies.</h1>
+        <p class="page-sub reveal reveal-d2">
+            Proof, not promises. Every engagement starts with a real business constraint, moves
+            through focused engineering, and ends with a measurable result.
         </p>
     </div>
 </div>
 
-<section class="work-section">
-    <div class="container">
-        <div class="section-label">
-            <div class="section-label-line"></div>
-            <span>Engagements</span>
-            <div class="section-label-num">3 Case Studies</div>
-        </div>
-    </div>
+<section class="section">
+    <div class="container cases-list">
 
-    <div class="cases-list">
         <!-- CS 01 -->
-        <div class="case-study reveal">
+        <article class="case-study reveal">
+            <div class="cs-media">
+                <img src="https://images.pexels.com/photos/1837726/pexels-photo-1837726.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                     alt="Modern library interior with open staircases and bookshelves" loading="lazy" />
+            </div>
             <div class="cs-meta">
-                <div class="cs-tag">Government · Education</div>
-                <div class="cs-index">01</div>
+                <span class="case-tag">Government · Education · Singapore &amp; China</span>
+                <span class="cs-index">01</span>
+            </div>
+            <h2 class="display-2 cs-title">Rebuilding a government library portal in Blazor</h2>
+            <div class="cs-tags">
+                <span class="tag">.NET Blazor</span><span class="tag">Syncfusion</span>
+                <span class="tag">WCAG 2.0</span><span class="tag">HTML/CSS</span>
+            </div>
+            <div class="cs-grid">
                 <div>
-                    <div class="cs-stack-label">Tech Stack</div>
-                    <div class="cs-tech">.NET Blazor</div>
-                    <div class="cs-tech">Syncfusion</div>
-                    <div class="cs-tech">WCAG 2.0</div>
-                    <div class="cs-tech">HTML</div>
-                    <div class="cs-tech">CSS</div>
+                    <div class="cs-label">Challenge</div>
+                    <p>A government-style library portal needed to be recreated in Blazor while
+                        preserving the polish and usability of an existing React and MUI-based
+                        interface - and become a flexible white-label solution that could be
+                        customized for multiple institutions across China and Singapore.</p>
+                </div>
+                <div>
+                    <div class="cs-label">Approach</div>
+                    <p>We rebuilt the experience in .NET Blazor, translating the React interface
+                        into a reusable component architecture that supports institution-specific
+                        branding, layouts, and workflows - with accessibility-conscious patterns for
+                        high-traffic catalogue browsing and search.</p>
+                </div>
+                <div>
+                    <div class="cs-label">Outcome</div>
+                    <div class="cs-outcome">100<span>%</span></div>
+                    <p>A reusable foundation for delivering branded library portal experiences
+                        faster, while cutting the effort needed to maintain separate frontends per
+                        institution.</p>
                 </div>
             </div>
-            <div class="cs-content">
-                <h3 class="cs-title">Rebuilding a Government Library Portal Experience in Blazor</h3>
-                <div class="cs-media">
-                    <img src="/images/case-library-portal.webp"
-                         alt="Library portal interface mockup shown on tablet screens"
-                         loading="lazy" />
-                </div>
-                <div class="cs-sections">
-                    <div>
-                        <div class="cs-section-label">Challenge</div>
-                        <p class="cs-section-text">
-                            A government-style library portal experience needed to be recreated in Blazor
-                            while preserving the polish, structure, and usability of an existing React and
-                            MUI-based interface.
-                            <br />
-                            <br />
-                            The goal was not simply to copy screens. The product needed to become a flexible
-                            white-label solution that could be customized for multiple institutions across
-                            China and Singapore.
-                        </p>
-                    </div>
-                    <div>
-                        <div class="cs-section-label">Approach</div>
-                        <p class="cs-section-text">
-                            We rebuilt the portal experience in .NET Blazor, translating the React and
-                            MUI-based interface into a reusable component architecture that could support
-                            institution-specific branding, layouts, and workflows.
-                            <br />
-                            <br />
-                            The solution was customized into a white-label platform for library and education
-                            institutions, with accessibility-conscious UI patterns, reusable components, and
-                            responsive layouts for high-traffic library workflows such as catalogue browsing
-                            and search.
-                        </p>
-                    </div>
-                    <div>
-                        <div class="cs-section-label">Outcome</div>
-                        <div class="cs-outcome-num">100<span>%</span></div>
-                        <p class="cs-section-text">
-                            The system provided a reusable foundation for delivering branded library portal
-                            experiences faster, while reducing the effort required to maintain separate
-                            frontend implementations for each institution.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
+        </article>
 
         <!-- CS 02 -->
-        <div class="case-study reveal">
+        <article class="case-study reveal reveal-d1">
+            <div class="cs-media">
+                <img src="https://images.pexels.com/photos/28606651/pexels-photo-28606651.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                     alt="Modern residential building in the Netherlands" loading="lazy" />
+            </div>
             <div class="cs-meta">
-                <div class="cs-tag">PropTech · Netherlands</div>
-                <div class="cs-index">02</div>
+                <span class="case-tag">PropTech · Netherlands</span>
+                <span class="cs-index">02</span>
+            </div>
+            <h2 class="display-2 cs-title">Reducing rental check-in time by 60% with custom .NET</h2>
+            <div class="cs-tags">
+                <span class="tag">.NET Core</span><span class="tag">Biometric / TOTP 2FA</span>
+                <span class="tag">Azure Functions</span><span class="tag">Digital Signatures</span>
+            </div>
+            <div class="cs-grid">
                 <div>
-                    <div class="cs-stack-label">Tech Stack</div>
-                    <div class="cs-tech">.NET Core</div>
-                    <div class="cs-tech">Biometric/TOTP 2FA</div>
-                    <div class="cs-tech">Azure Functions</div>
-                    <div class="cs-tech">Digital Signatures</div>
+                    <div class="cs-label">Challenge</div>
+                    <p>A rental management operation in the Netherlands was slowed by manual
+                        onboarding and paper-based documentation. Property managers spent too much
+                        time on check-ins, and tenants experienced unnecessary delays.</p>
+                </div>
+                <div>
+                    <div class="cs-label">Approach</div>
+                    <p>We designed and deployed a full-stack .NET system to digitize the rental
+                        workflow end to end - secure authentication, digital signatures, automated
+                        PDF generation, and a mobile-responsive booking experience, deployed on IIS
+                        for real operational use.</p>
+                </div>
+                <div>
+                    <div class="cs-label">Outcome</div>
+                    <div class="cs-outcome">60<span>%</span></div>
+                    <p>Check-in processing time dropped by 60%. Paper handoffs were replaced with
+                        secure, auditable records, and the mobile-first flow moved tenants from
+                        interest to confirmation faster.</p>
                 </div>
             </div>
-            <div class="cs-content">
-                <h3 class="cs-title">Reducing Rental Check-In Times by 60% with Custom .NET Architecture</h3>
-                <div class="cs-media">
-                    <img src="/images/case-rental-checkin.webp"
-                         alt="Rental check-in workflow software mockup on laptop and tablet"
-                         loading="lazy" />
+        </article>
+
+        <!-- CS 03 -->
+        <article class="case-study reveal reveal-d2">
+            <div class="cs-media">
+                <img src="https://images.pexels.com/photos/3855771/pexels-photo-3855771.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                     alt="Mechanic working in an automotive repair shop" loading="lazy" />
+            </div>
+            <div class="cs-meta">
+                <span class="case-tag">Automotive · Business Operations</span>
+                <span class="cs-index">03</span>
+            </div>
+            <h2 class="display-2 cs-title">Modernizing a legacy invoicing system from WPF to Blazor</h2>
+            <div class="cs-tags">
+                <span class="tag">Blazor WASM PWA</span><span class="tag">WPF Migration</span>
+                <span class="tag">Docotic PDF</span><span class="tag">Azure DevOps</span>
+            </div>
+            <div class="cs-grid">
+                <div>
+                    <div class="cs-label">Challenge</div>
+                    <p>An automotive repair business ran on a legacy invoicing workflow that
+                        limited scalability and slowed internal processes. The system needed to
+                        move to a modern web architecture without losing the workflows staff
+                        already depended on.</p>
                 </div>
-                <div class="cs-sections">
-                    <div>
-                        <div class="cs-section-label">Challenge</div>
-                        <p class="cs-section-text">
-                            A rental management operation in the Netherlands was slowed down by manual onboarding,
-                            paper-based documentation, and repetitive administrative work.
-                            <br />
-                            <br />
-                            Property managers were spending too much time on check-ins, while tenants experienced
-                            unnecessary delays during the booking and onboarding process.
-                        </p>
-                    </div>
-                    <div>
-                        <div class="cs-section-label">Approach</div>
-                        <p class="cs-section-text">
-                            We designed, built, and deployed a full-stack .NET system to digitize the rental
-                            workflow from start to finish.
-                            <br />
-                            <br />
-                            The solution introduced secure authentication, digital signatures, automated
-                            PDF generation, SMTP-based document sharing, and a mobile-responsive booking
-                            experience.
-                            <br />
-                            <br />
-                            The application was deployed on IIS, giving the business a production-ready
-                            system that could support real operational use without depending on manual
-                            paperwork or disconnected tools.
-                        </p>
-                    </div>
-                    <div>
-                        <div class="cs-section-label">Outcome</div>
-                        <div class="cs-outcome-num">60<span>%</span></div>
-                        <p class="cs-section-text">
-                            Check-in processing time dropped by 60%. Paper handoffs were replaced
-                            with secure, auditable records, while the mobile-first booking flow helped users move from
-                            interest to confirmation faster.
-                        </p>
-                        </div>
-                    </div>
+                <div>
+                    <div class="cs-label">Approach</div>
+                    <p>We migrated key functionality from WPF to .NET Blazor, preserving familiar
+                        productivity patterns with Excel-like keyboard interactions inside data
+                        grids, and engineered a high-performance PDF pipeline using Docotic for
+                        consistent document rendering.</p>
+                </div>
+                <div>
+                    <div class="cs-label">Outcome</div>
+                    <div class="cs-outcome">Web<span>-based</span></div>
+                    <p>A more modern, scalable invoicing platform with faster workflows and
+                        stronger long-term maintainability - while keeping the operational
+                        familiarity staff needed to stay productive.</p>
                 </div>
             </div>
+        </article>
 
-            <!-- CS 03 -->
-            <div class="case-study reveal">
-                <div class="cs-meta">
-                    <div class="cs-tag">Automotive · Business Operations</div>
-                    <div class="cs-index">03</div>
-                    <div>
-                        <div class="cs-stack-label">Tech Stack</div>
-                        <div class="cs-tech">Blazor WASM PWA</div>
-                        <div class="cs-tech">WPF Migration</div>
-                        <div class="cs-tech">Docotic PDF</div>
-                        <div class="cs-tech">Azure DevOps</div>
-                    </div>
-                </div>
-                <div class="cs-content">
-                    <h3 class="cs-title">Modernizing a Legacy Invoicing System from WPF to Blazor</h3>
-                    <div class="cs-media">
-                        <img src="/images/case-invoicing-modernization.webp"
-                             alt="Modern invoicing dashboard mockup with a legacy desktop app in the background"
-                             loading="lazy" />
-                    </div>
-                    <div class="cs-sections">
-                        <div>
-                            <div class="cs-section-label">Challenge</div>
-                            <p class="cs-section-text">
-                                An automotive repair business was operating with a legacy invoicing workflow that limited scalability, slowed internal processes, and made future improvements harder to deliver.
-                                <br />
-                                <br />
-                                The system needed to move from a desktop-style experience into a modern web architecture without losing the familiar workflows users depended on.
-                            </p>
-                            </div>
-                            <div>
-                                <div class="cs-section-label">Approach</div>
-                                <p class="cs-section-text">
-                                    We modernized the invoicing system by migrating key functionality from 
-                                    WPF to .NET Blazor, creating a cleaner, more scalable web-based 
-                                    experience.
-                                    <br />
-                                    <br />
-                                    The solution preserved familiar productivity patterns by implementing 
-                                    Excel-like keyboard interactions inside data grids, helping users 
-                                    move quickly through invoice-related tasks.
-                                    <br />
-                                    <br />
-                                    We also engineered a high-performance PDF generation engine using 
-                                    Docotic, ensuring invoices and documents could be rendered 
-                                    consistently across deployment environments.
-                                </p>
-                                </div>
-                                <div>
-                                    <div class="cs-section-label">Outcome</div>
-                                    <div class="cs-outcome-num">Web<span></span></div>
-                                    <p class="cs-section-text">
-                                        A more modern, scalable invoicing platform with improved usability,
-                                        faster workflow execution, and stronger long-term maintainability.
-                                        <br />
-                                        <br />
-                                        The business gained a cleaner web-based foundation for future improvements
-                                        while retaining the operational familiarity users needed to stay productive.
-                                    </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+    </div>
+</section>
 
-                    <div class="work-cta">
-                        <div class="container">
-                            <div class="cta-row">
-                                <p class="cta-quote reveal">Build the kind of system your business can grow on.</p>
-                                <div class="reveal reveal-d1">
-                                    <a href="/contact" class="btn-primary">
-                                        <span>Start a conversation</span><span class="arrow-right">→</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+<section class="section section-alt section-border-t work-cta">
+    <div class="container cta-row">
+        <p class="display-2" style="max-width:520px;">Build the kind of system your business can grow on.</p>
+        <div class="btn-row">
+            <a href="/contact" class="btn btn-primary">Start a conversation →</a>
+        </div>
+    </div>
+</section>
 
 @code {
     protected override async Task OnAfterRenderAsync(bool firstRender)

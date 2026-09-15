@@ -1,186 +1,84 @@
 /* ============================================================
-   Contact.razor.css  —  CSS Isolation for the Contact page.
+   Contact.razor.css — CSS isolation for the Contact page
    ============================================================ */
 
-.contact-section {
-    background: var(--bg);
-    padding: 80px 48px 140px;
-    transition: background 0.5s;
+.contact-grid { align-items: start; }
+
+.contact-info { display: flex; flex-direction: column; gap: 22px; }
+
+.ci-item { display: flex; flex-direction: column; gap: 4px; }
+
+.ci-item span {
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
 }
 
-.contact-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 100px;
-    align-items: start;
+.ci-item strong { font-size: 0.98rem; font-weight: 600; color: var(--ink); }
+
+.ci-item a {
+    font-size: 0.98rem;
+    font-weight: 600;
+    color: var(--accent-ink);
+    text-decoration: none;
 }
 
-/* ── Left Column ──────────────────────────────────────────── */
-.contact-heading {
-    font-family: var(--display);
-    font-size: clamp(56px, 8vw, 130px);
-    line-height: 0.9;
-    letter-spacing: 0.02em;
-    color: var(--heading);
-    margin-bottom: 32px;
-    transition: color 0.5s;
-}
-
-.contact-heading span { color: var(--accent); }
-
-.contact-sub {
-    font-size: 1rem;
-    color: var(--text-dim);
-    line-height: 1.75;
-    margin-bottom: 48px;
-    max-width: 360px;
-    transition: color 0.5s;
-}
-
-.contact-info {
+/* ── Form ─────────────────────────────────────────────────── */
+.contact-form {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-m);
+    padding: 32px;
+    background: var(--bg-soft);
 }
 
-.ci-item {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    border-left: 1px solid var(--border);
-    padding-left: 18px;
-    transition: border-left-color 0.25s;
-}
+.form-field { display: flex; flex-direction: column; gap: 8px; }
 
-.ci-item:hover { border-left-color: var(--accent); }
+.form-field label { font-size: 0.86rem; font-weight: 600; color: var(--ink); }
 
-.ci-label {
-    font-family: var(--mono);
-    font-size: 0.6rem;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: var(--text-dimmer);
-    transition: color 0.5s;
-}
-
-.ci-value {
-    font-size: 0.92rem;
-    color: var(--text);
-    text-decoration: none;
-    transition: color 0.2s;
-}
-
-a.ci-value:hover { color: var(--accent); }
-
-/* ── Form ─────────────────────────────────────────────────── */
-::deep .form-row {
-    position: relative;
-    border-bottom: 1px solid var(--border);
-    transition: border-color 0.5s;
-}
-
-::deep .form-row:first-of-type { border-top: 1px solid var(--border); }
-
-/* Blazor InputText / InputTextArea produce an <input> / <textarea> */
-::deep .form-row input,
-::deep .form-row textarea {
+::deep .form-field input,
+::deep .form-field textarea {
     width: 100%;
-    background: transparent;
+    font-family: var(--font);
+    font-size: 0.95rem;
+    color: var(--ink);
+    background: var(--bg);
+    border: 1px solid var(--border-s);
+    border-radius: var(--radius-s);
+    padding: 12px 14px;
+    transition: border-color 0.2s;
+}
+
+::deep .form-field input:focus,
+::deep .form-field textarea:focus {
+    border-color: var(--accent);
+}
+
+::deep .form-field textarea { min-height: 120px; resize: vertical; }
+
+.submit-btn {
     border: none;
-    outline: none;
-    padding: 28px 0 14px;
-    font-family: var(--body);
-    font-size: 1rem;
-    font-weight: 300;
-    color: var(--text);
-    resize: none;
-    transition: color 0.5s;
+    cursor: pointer;
+    justify-content: center;
+    margin-top: 4px;
 }
 
-::deep .form-row textarea { min-height: 130px; }
+.submit-btn:disabled { opacity: 0.6; cursor: default; transform: none; }
 
-::deep .form-label {
-    position: absolute;
-    top: 22px; left: 0;
-    font-family: var(--mono);
-    font-size: 0.66rem;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: var(--text-dimmer);
-    pointer-events: none;
-    transition: top 0.25s, font-size 0.25s, color 0.25s;
+.form-success {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #16794B;
+    background: #EAFBF2;
+    border: 1px solid #BFEBD4;
+    border-radius: var(--radius-s);
+    padding: 12px 14px;
 }
 
-::deep .form-row.focused .form-label,
-::deep .form-row.filled  .form-label {
-    top: 9px;
-    font-size: 0.56rem;
-    color: var(--accent);
-}
-
-::deep .form-underline {
-    position: absolute;
-    bottom: -1px; left: 0;
-    width: 0; height: 1px;
-    background: var(--accent);
-    transition: width 0.4s var(--ease);
-}
-
-::deep .form-row.focused .form-underline { width: 100%; }
-
-/* ── Submit Button ────────────────────────────────────────── */
-::deep .submit-btn {
-    margin-top: 36px;
-    background: var(--accent);
-    color: #fff;
-    border: none;
-    padding: 20px 48px;
-    font-family: var(--mono);
-    font-size: 0.73rem;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    cursor: none;
-    position: relative;
-    overflow: hidden;
-    align-self: flex-start;
-    display: inline-block;
-    transition: opacity 0.3s, transform 0.2s;
-}
-
-::deep .submit-btn:disabled { opacity: 0.65; }
-::deep .submit-btn:not(:disabled):active { transform: scale(0.97); }
-
-::deep .submit-btn::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: #111;
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.35s var(--ease);
-}
-
-::deep .submit-btn:not(:disabled):hover::before { transform: scaleX(1); }
-
-::deep .submit-inner {
-    position: relative;
-    z-index: 1;
-}
-
-/* ── Success Message ──────────────────────────────────────── */
-::deep .form-success {
-    margin-top: 24px;
-    font-family: var(--mono);
-    font-size: 0.72rem;
-    letter-spacing: 0.12em;
-    color: var(--accent);
-    padding: 16px 20px;
-    border: 1px solid rgba(255, 77, 0, 0.3);
-    background: rgba(255, 77, 0, 0.05);
-}
-
-/* ── Responsive ───────────────────────────────────────────── */
-@media (max-width: 960px) {
-    .contact-section { padding: 60px 24px 100px; }
-    .contact-grid { grid-template-columns: 1fr; gap: 60px; }
+@media (max-width: 900px) {
+    .contact-form { padding: 24px; }
 }

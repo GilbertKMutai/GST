@@ -1,46 +1,32 @@
 ﻿@inherits LayoutComponentBase
 @inject IJSRuntime JS
-@inject NavigationManager Nav
 
 <!-- Mobile Menu (portal-level, sits outside page component tree) -->
 <div class="mobile-menu @(_menuOpen ? "open" : "")" id="mm">
-    <button class="mobile-theme-toggle" @onclick="ToggleTheme" aria-label="Toggle theme">
-        <div class="toggle-track">
-            <span class="t-sun">☀</span>
-            <span class="t-moon">☽</span>
-        </div>
-        <div class="toggle-thumb"></div>
-    </button>
     <NavLink href="/" class="mob-link" Match="NavLinkMatch.All" @onclick="CloseMenu">Home</NavLink>
-    <NavLink href="/about"    class="mob-link" @onclick="CloseMenu">About</NavLink>
+    <NavLink href="/about" class="mob-link" @onclick="CloseMenu">About</NavLink>
     <NavLink href="/services" class="mob-link" @onclick="CloseMenu">Services</NavLink>
-    <NavLink href="/work"     class="mob-link" @onclick="CloseMenu">Work</NavLink>
-    <NavLink href="/process"  class="mob-link" @onclick="CloseMenu">Process</NavLink>
-    <NavLink href="/contact"  class="mob-link" @onclick="CloseMenu">Contact</NavLink>
+    <NavLink href="/work" class="mob-link" @onclick="CloseMenu">Work</NavLink>
+    <NavLink href="/process" class="mob-link" @onclick="CloseMenu">Process</NavLink>
+    <NavLink href="/contact" class="mob-link mob-link-cta" @onclick="CloseMenu">Start a project →</NavLink>
 </div>
 
 <!-- Navigation -->
 <nav id="mainNav" class="@(_scrolled ? "scrolled" : "")">
     <NavLink href="/" class="nav-logo" Match="NavLinkMatch.All">
-        <div class="logo-dot"></div>
-        <div>
-            Gilbert Specialists Tech
-            <span>.</span>
-        </div>
-
+        Gilbert Specialists Tech<span>.</span>
     </NavLink>
 
     <ul class="nav-links">
-        <li><NavLink href="/about"    ActiveClass="active">About</NavLink></li>
+        <li><NavLink href="/about" ActiveClass="active">About</NavLink></li>
         <li><NavLink href="/services" ActiveClass="active">Services</NavLink></li>
-        <li><NavLink href="/work"     ActiveClass="active">Work</NavLink></li>
-        <li><NavLink href="/process"  ActiveClass="active">Process</NavLink></li>
+        <li><NavLink href="/work" ActiveClass="active">Work</NavLink></li>
+        <li><NavLink href="/process" ActiveClass="active">Process</NavLink></li>
     </ul>
 
-    <div class="nav-right ">
-        <NavLink href="/contact" class="nav-cta">Start a Project</NavLink>
-        <button class="hamburger @(_menuOpen ? "open" : "")"
-                @onclick="ToggleMenu" aria-label="Menu">
+    <div class="nav-right">
+        <NavLink href="/contact" class="nav-cta">Start a project</NavLink>
+        <button class="hamburger @(_menuOpen ? "open" : "")" @onclick="ToggleMenu" aria-label="Menu">
             <span></span><span></span><span></span>
         </button>
     </div>
@@ -55,56 +41,52 @@
 <footer>
     <div class="footer-inner">
         <div class="footer-grid">
-            <div>
+            <div class="footer-brand">
                 <div class="footer-brand-name">Gilbert Specialists Tech<span>.</span></div>
                 <p class="footer-tagline">
-                    Web Apps That Convert.<br />
-                    Cloud Infrastructure That Delivers.
+                    A boutique .NET, Blazor, and cloud engineering<br />
+                    consultancy. Nairobi-based, built for global teams.
                 </p>
+                <a href="mailto:hello@buildwithgilbert.com" class="footer-email">hello@buildwithgilbert.com</a>
             </div>
             <div class="footer-col">
                 <h5>Navigation</h5>
                 <ul class="footer-links">
                     <li><NavLink href="/" Match="NavLinkMatch.All">Home</NavLink></li>
-                    <li><NavLink href="/about">About the Agency</NavLink></li>
-                    <li><NavLink href="/services">Capabilities</NavLink></li>
-                    <li><NavLink href="/work">Case Studies</NavLink></li>
-                    <li><NavLink href="/process">Our Process</NavLink></li>
-                    <li><NavLink href="/contact">Start a Project</NavLink></li>
+                    <li><NavLink href="/about">About</NavLink></li>
+                    <li><NavLink href="/services">Services</NavLink></li>
+                    <li><NavLink href="/work">Case studies</NavLink></li>
+                    <li><NavLink href="/process">Process</NavLink></li>
+                    <li><NavLink href="/contact">Contact</NavLink></li>
                 </ul>
             </div>
             <div class="footer-col">
-                <h5>Services</h5>
+                <h5>Capabilities</h5>
                 <ul class="footer-links">
-                    <li><NavLink href="/services">Blazor</NavLink></li>
-                    <li><NavLink href="/services">Azure Architecture</NavLink></li>
-                    <li><NavLink href="/services">AWS</NavLink></li>
-                    <li><NavLink href="/services">Legacy Migration</NavLink></li>
-                    <li><NavLink href="/services">Full-Stack .NET</NavLink></li>
-                    <li><NavLink href="/services">Consulting</NavLink></li>
+                    <li><NavLink href="/services">Blazor development</NavLink></li>
+                    <li><NavLink href="/services">Azure architecture</NavLink></li>
+                    <li><NavLink href="/services">AWS architecture</NavLink></li>
+                    <li><NavLink href="/services">Legacy migration</NavLink></li>
+                    <li><NavLink href="/services">Full-stack .NET</NavLink></li>
                 </ul>
             </div>
         </div>
         <div class="footer-bottom">
             <span class="footer-copy">© 2026 Gilbert Specialists Tech · Nairobi, Kenya</span>
-            <span class="footer-legal">
-                Registered as <span>Gilbert Specialists Tech</span>
-            </span>
+            <span class="footer-legal">Registered as Gilbert Specialists Tech</span>
         </div>
     </div>
 </footer>
 
 @code {
-    private bool _scrolled  = false;
-    private bool _menuOpen  = false;
+    private bool _scrolled = false;
+    private bool _menuOpen = false;
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
         if (firstRender)
         {
-            // Boot shared JS (cursor, scroll reveal, theme restore)
             await JS.InvokeVoidAsync("GSTApp.init");
-            // Register scroll listener to drive _scrolled state
             await JS.InvokeVoidAsync("GSTApp.onScroll", DotNetObjectReference.Create(this));
         }
     }
@@ -116,13 +98,9 @@
         StateHasChanged();
     }
 
-    private async Task ToggleTheme()
-        => await JS.InvokeVoidAsync("GSTApp.toggleTheme");
-
     private void ToggleMenu()
     {
         _menuOpen = !_menuOpen;
-        // Lock / unlock body scroll via JS
         _ = JS.InvokeVoidAsync("GSTApp.setBodyScroll", !_menuOpen);
     }
 
