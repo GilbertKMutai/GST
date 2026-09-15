@@ -1,248 +1,38 @@
 /* ============================================================
-   Process.razor.css  —  CSS Isolation for the Process page.
+   Process.razor.css — CSS isolation for the Process page
    ============================================================ */
 
-/* ── Hero / Steps Section ─────────────────────────────────── */
-.process-hero {
-    padding: 120px 48px;
-    background: var(--surface);
-    position: relative;
-    overflow: hidden;
-    transition: background 0.5s;
-}
-
-.process-bg-text {
-    position: absolute;
-    top: 50%;
-    left: -20px;
-    transform: translateY(-50%);
-    font-family: var(--display);
-    font-size: 35vw;
-    color: var(--border);
-    pointer-events: none;
-    white-space: nowrap;
-    letter-spacing: 0.02em;
-    line-height: 1;
-    user-select: none;
-    transition: color 0.5s;
-}
-
-.process-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 100px;
-    align-items: start;
-    position: relative; /* sits above bg text */
-}
-
-.process-title {
-    font-family: var(--display);
-    font-size: clamp(52px, 7vw, 110px);
-    line-height: 0.9;
-    letter-spacing: 0.02em;
-    color: var(--heading);
-    margin-bottom: 32px;
-    transition: color 0.5s;
-}
-
-.process-intro {
-    font-size: 1rem;
-    color: var(--text-dim);
-    line-height: 1.75;
-    max-width: 380px;
-    transition: color 0.5s;
-}
-
-/* ── Step List ────────────────────────────────────────────── */
 .steps { display: flex; flex-direction: column; }
 
-.step {
+.step-row {
+    display: grid;
+    grid-template-columns: 52px 1fr;
+    gap: 18px;
+    padding: 22px 0;
     border-top: 1px solid var(--border);
-    padding: 36px 0;
-    display: grid;
-    grid-template-columns: 80px 1fr;
-    gap: 20px;
-    transition: border-top-color 0.25s;
 }
 
-.step:last-child { border-bottom: 1px solid var(--border); }
-.step:hover      { border-top-color: var(--accent); }
+.step-row:last-child { border-bottom: 1px solid var(--border); }
 
-.step-num {
-    font-family: var(--display);
-    font-size: 2.8rem;
-    color: var(--text-dimmer);
-    letter-spacing: 0.02em;
-    line-height: 1;
-    padding-top: 4px;
-    transition: color 0.25s;
-}
+.step-num { font-size: 1.2rem; font-weight: 700; color: var(--ink-faint); }
+.step-row h4 { font-size: 0.98rem; margin-bottom: 6px; }
+.step-row p { font-size: 0.9rem; color: var(--ink-dim); line-height: 1.65; }
 
-.step:hover .step-num { color: var(--accent); }
+/* ── Sprint phases ────────────────────────────────────────── */
+.phase-week { font-size: 0.76rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent-ink); margin-bottom: 8px; }
+.phase-title { font-size: 1.05rem; font-weight: 700; color: var(--ink); margin-bottom: 16px; }
+.phase ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+.phase li { font-size: 0.88rem; color: var(--ink-dim); }
 
-.step-body h4 {
-    font-size: 1rem;
-    font-weight: 500;
-    color: var(--heading);
-    margin-bottom: 10px;
-    transition: color 0.5s;
-}
-
-.step-body p {
-    font-size: 0.87rem;
-    color: var(--text-dim);
-    line-height: 1.7;
-    transition: color 0.5s;
-}
-
-/* ── Sprint Template ──────────────────────────────────────── */
-.sprint-section {
-    background: var(--bg);
-    padding: 120px 48px;
-    transition: background 0.5s;
-}
-
-.phase-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1px;
-    background: var(--border);
-    transition: background 0.5s;
-}
-
-.phase {
-    background: var(--bg);
-    padding: 48px 36px;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    transition: background 0.3s;
-}
-
-.phase:hover { background: var(--surface); }
-
-.phase-week {
-    font-family: var(--mono);
-    font-size: 0.62rem;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: var(--accent);
-}
-
-.phase-title {
-    font-size: 1.05rem;
-    font-weight: 500;
-    color: var(--heading);
-    transition: color 0.5s;
-}
-
-.phase-items {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    margin-top: 8px;
-}
-
-.phase-item {
-    font-size: 0.84rem;
-    color: var(--text-dim);
-    padding-left: 16px;
-    position: relative;
-    transition: color 0.5s;
-}
-
-.phase-item::before {
-    content: '·';
-    position: absolute;
-    left: 0;
-    color: var(--accent);
-}
-
-/* ── Feasibility ──────────────────────────────────────────── */
-.feasibility-section {
-    background: var(--surface);
-    padding: 120px 48px;
-    transition: background 0.5s;
-}
-
-.feasibility-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1px;
-    background: var(--border);
-    transition: background 0.5s;
-}
-
-.feas-item {
-    background: var(--surface);
-    padding: 48px 40px;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    transition: background 0.5s;
-}
-
-.feas-label {
-    font-family: var(--mono);
-    font-size: 0.62rem;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: var(--accent);
-}
-
-.feas-rating {
-    font-family: var(--display);
-    font-size: 3rem;
-    color: var(--accent);
-    line-height: 1;
-    transition: color 0.5s;
-}
-
-.feas-text {
-    font-size: 0.87rem;
-    color: var(--text-dim);
-    line-height: 1.7;
-    transition: color 0.5s;
-}
+/* ── Feasibility cards ────────────────────────────────────── */
+.feas-rating { font-size: 0.8rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent-ink); margin-bottom: 14px; }
+.feas-grid p { font-size: 0.92rem; line-height: 1.7; color: var(--ink-dim); }
 
 /* ── CTA ──────────────────────────────────────────────────── */
-.process-cta {
-    background: var(--bg);
-    padding: 80px 48px;
-    transition: background 0.5s;
-}
-
-.cta-row {
+.process-cta .cta-row {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 24px;
     flex-wrap: wrap;
-    gap: 32px;
-}
-
-.cta-heading {
-    font-family: var(--display);
-    font-size: clamp(40px, 5vw, 80px);
-    color: var(--heading);
-    letter-spacing: 0.02em;
-    line-height: 0.9;
-    transition: color 0.5s;
-}
-
-.cta-actions { display: flex; gap: 16px; flex-wrap: wrap; }
-
-/* ── Responsive ───────────────────────────────────────────── */
-@media (max-width: 960px) {
-    .process-hero    { padding: 80px 24px; }
-    .process-grid    { grid-template-columns: 1fr; gap: 56px; }
-    .sprint-section  { padding: 80px 24px; }
-    .phase-grid      { grid-template-columns: 1fr 1fr; }
-    .feasibility-section { padding: 80px 24px; }
-    .feasibility-grid { grid-template-columns: 1fr; }
-    .process-cta     { padding: 60px 24px; }
-    .cta-row         { flex-direction: column; align-items: flex-start; }
-}
-
-@media (max-width: 600px) {
-    .phase-grid { grid-template-columns: 1fr; }
 }

@@ -1,198 +1,78 @@
 /* ============================================================
-   Work.razor.css  —  CSS Isolation for the Work page.
+   Work.razor.css — CSS isolation for the Work (case studies) page
    ============================================================ */
 
-.work-section {
-    background: var(--bg);
-    padding: 0;
-    transition: background 0.5s;
-}
-
-.section-label {
-    padding: 72px 48px 0;
-}
-
-/* ── Cases List ───────────────────────────────────────────── */
 .cases-list {
     display: flex;
     flex-direction: column;
-    gap: 1px;
-    background: var(--border);
-    transition: background 0.5s;
+    gap: 96px;
 }
 
-.case-study {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    background: var(--bg);
-    transition: background 0.3s;
-}
-
-.case-study:hover { background: var(--surface); }
-
-/* ── Case Meta (left column) ──────────────────────────────── */
-.cs-meta {
-    padding: 60px 48px;
-    border-right: 1px solid var(--border);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 40px;
-    transition: border-color 0.5s;
-}
-
-.cs-tag {
-    font-family: var(--mono);
-    font-size: 0.63rem;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: var(--accent);
-    border: 1px solid rgba(255, 77, 0, 0.3);
-    padding: 6px 12px;
-    width: fit-content;
-}
-
-.cs-index {
-    font-family: var(--display);
-    font-size: 5rem;
-    line-height: 1;
-    color: var(--text-dimmer);
-    letter-spacing: 0.02em;
-    transition: color 0.5s;
-}
-
-.cs-stack-label {
-    font-family: var(--mono);
-    font-size: 0.58rem;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: var(--text-dimmer);
-    margin-bottom: 8px;
-    transition: color 0.5s;
-}
-
-.cs-tech {
-    font-family: var(--mono);
-    font-size: 0.7rem;
-    color: var(--text-dim);
-    line-height: 1.7;
-    transition: color 0.5s;
-}
-
-/* ── Case Content (right column) ──────────────────────────── */
-.cs-content {
-    padding: 60px 64px;
-    display: grid;
-    grid-template-rows: auto 1fr;
-    gap: 36px;
-}
-
-.cs-title {
-    font-family: var(--serif);
-    font-size: clamp(22px, 2.6vw, 38px);
-    line-height: 1.15;
-    color: var(--heading);
-    font-style: italic;
-    transition: color 0.5s;
-}
+.case-study { max-width: 920px; }
 
 .cs-media {
-    aspect-ratio: 16 / 7;
+    aspect-ratio: 16 / 9;
+    border-radius: var(--radius-m);
     overflow: hidden;
     border: 1px solid var(--border);
-    background: var(--surface);
+    margin-bottom: 28px;
+    background: var(--bg-soft);
 }
 
-.cs-media img {
-    width: 100%;
-    height: 100%;
-    display: block;
-    object-fit: cover;
-    filter: saturate(0.94) contrast(1.04);
-    transition: transform 0.55s var(--ease), filter 0.35s;
-}
+.cs-media img { width: 100%; height: 100%; object-fit: cover; }
 
-.case-study:hover .cs-media img {
-    transform: scale(1.025);
-    filter: saturate(1) contrast(1.08);
-}
-
-.cs-sections {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 32px;
-    align-items: start;
-}
-
-.cs-section-label {
-    font-family: var(--mono);
-    font-size: 0.58rem;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: var(--accent);
-    margin-bottom: 10px;
-}
-
-.cs-section-text {
-    font-size: 0.87rem;
-    line-height: 1.7;
-    color: var(--text-dim);
-    transition: color 0.5s;
-}
-
-.cs-outcome-num {
-    font-family: var(--display);
-    font-size: 2.5rem;
-    color: var(--heading);
-    letter-spacing: 0.02em;
-    line-height: 1;
-    margin-bottom: 8px;
-    transition: color 0.5s;
-}
-
-.cs-outcome-num span { color: var(--accent); }
-
-/* ── Bottom CTA ───────────────────────────────────────────── */
-.work-cta {
-    padding: 80px 48px;
-}
-
-.cta-row {
+.cs-meta {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;
+    margin-bottom: 14px;
+}
+
+.case-tag { font-size: 0.8rem; font-weight: 600; color: var(--accent-ink); }
+.cs-index { font-size: 0.8rem; font-weight: 700; color: var(--ink-faint); }
+
+.cs-title { margin-bottom: 18px; max-width: 780px; }
+
+.cs-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 36px; }
+
+.cs-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 32px;
+    padding-top: 32px;
+    border-top: 1px solid var(--border);
 }
 
-.cta-quote {
-    font-family: var(--serif);
-    font-size: clamp(22px, 2.5vw, 36px);
-    font-style: italic;
-    color: var(--heading);
-    max-width: 500px;
-    transition: color 0.5s;
+.cs-label {
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    margin-bottom: 10px;
 }
 
-/* ── Responsive ───────────────────────────────────────────── */
-@media (max-width: 960px) {
-    .section-label { padding: 56px 24px 0; }
+.cs-grid p { font-size: 0.92rem; line-height: 1.7; color: var(--ink-dim); }
 
-    .case-study { grid-template-columns: 1fr; }
+.cs-outcome {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--ink);
+    margin-bottom: 10px;
+}
 
-    .cs-meta {
-        border-right: none;
-        border-bottom: 1px solid var(--border);
-        padding: 32px 24px;
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: 20px;
-        align-items: center;
-    }
+.cs-outcome span { font-size: 1rem; font-weight: 600; color: var(--ink-faint); }
 
-    .cs-content { padding: 32px 24px; }
-    .cs-media { aspect-ratio: 4 / 3; }
-    .cs-sections { grid-template-columns: 1fr; gap: 24px; }
-    .work-cta { padding: 60px 24px; }
-    .cta-row { flex-direction: column; align-items: flex-start; }
+/* ── Bottom CTA ───────────────────────────────────────────── */
+.work-cta .cta-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 900px) {
+    .cs-grid { grid-template-columns: 1fr; gap: 24px; }
+    .cases-list { gap: 64px; }
 }
