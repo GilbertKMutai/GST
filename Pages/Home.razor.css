@@ -7,7 +7,7 @@
     background: var(--bg);
 }
 
-.hero-title { max-width: 780px; margin-bottom: 22px; }
+.hero-title { max-width: 780px; margin-bottom: 22px; outline: none;}
 .hero-title .accent { color: var(--accent); }
 
 .hero-stats { margin-top: 56px; }
